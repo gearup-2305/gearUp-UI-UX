@@ -1,15 +1,48 @@
 // import logo from './logo.svg';
-import './App.css';
 // import { Routes, Route } from 'react-router-dom';
-
+import './App.css';
+import { ApolloClient, ApolloProvider, HttpLink, from, useQuery} from '@apollo/client'
+import { onError } from '@apollo/client/link/error'
 import Header from './components/Header/Header'
+import { LOAD_ARTISTS } from './GraphQL/Queries';
+import { useEffect, useState } from 'react';
+// import {} from ''
 
+const errorLink = onError(({graphqlErrors, networkError}) => {
+  if (graphqlErrors) {
+      graphqlErrors.map(({message, location, path}) => {
+      console.log(`Graphql Error ${message} ${location} ${path}`)
+    })
+  }
+})
+
+const link = from([
+  errorLink,
+  new HttpLink({uri: "https://c4fa458b-51b7-48f5-9cc1-ec7ad47e1e6d.mock.pstmn.io/graphql"})
+])
+
+const client = new ApolloClient({
+  link: link, 
+  // cache: new InMemoryCache(),
+})
 
 function App() {
+  // const [artists, setArtists] = useState({})
+  const { error, loading, data } = useQuery(LOAD_ARTISTS)
+
+  useEffect(() => {
+    console.log(data)
+    // if(data) {
+    //   setArtists(data.artists)
+    // }
+  }, [data])
+
   return (
-    <div className="App">
-     <Header/>
-    </div>
+    <ApolloProvider client={client}>
+      <div>
+        <Header/>
+      </div>
+    </ApolloProvider>
   );
 }
 

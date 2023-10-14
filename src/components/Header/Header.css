@@ -16,3 +16,20 @@
 .gearup-logo {
     width: 8em;
 }
+
+.title-wrapper{
+    display: flex;
+    width: 30%;
+    padding-left: 2em;
+    font-family: Antic Didone;
+    font-size: 1.2em;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    font-family: 'montserrat';
+    color: white;
+    width: 60%;
+    justify-content: space-between
+}

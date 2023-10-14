@@ -1,8 +1,5 @@
 import './HomePage.css'
 import Together from '../../together.png'
-import Frame from '../../frame.png'
-
-
 
 const HomePage = () => {
     return (

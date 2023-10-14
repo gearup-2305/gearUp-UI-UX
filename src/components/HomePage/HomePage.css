@@ -68,7 +68,8 @@
 
 .login-home-heading {
     font-family: Antic Didone;
-    color: white;
+    color: white !important;
     background: black;
-    font-size: 1.8em;
+    font-size: 1.4em !important;
+    margin-top: 1em !important;
 }

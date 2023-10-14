@@ -36,5 +36,6 @@
 
 .nav-link {
     cursor: pointer;
-
+    color: white;
+    margin: 0;
 }

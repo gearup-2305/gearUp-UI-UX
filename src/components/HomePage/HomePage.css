@@ -20,7 +20,6 @@
     height: auto;
     background-color: #E1EFF4;
     padding: .8em;
-    font-family: Antic Didone;
     margin-bottom: .2em;
 }
 
@@ -32,11 +31,16 @@
     margin-top: 0;
 }
 
-.description-container h2 {
+.description-heading {
     font-size: 3em;
+    font-family: Antic Didone;
+    color: black;
 }
 
-.description-container button {
+.login-link {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
     font-family: 'montserrat';
     font-size: 1.2em;
     color: white;
@@ -47,7 +51,6 @@
     width: 13em;
     margin-bottom: 2em;
     cursor: pointer;
-
 }
 
 .login-container {
@@ -63,7 +66,8 @@
     width: 100%;
 }
 
-.login-container h2 {
+.login-home-heading {
+    font-family: Antic Didone;
     color: white;
     background: black;
     font-size: 1.8em;

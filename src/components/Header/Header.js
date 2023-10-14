@@ -1,5 +1,5 @@
 import './Header.css'
-// import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 // import PropTypes from 'prop-types'
 
 const Header = () => {
@@ -11,10 +11,11 @@ const Header = () => {
         </div>
       </div>
       <div className='nav-wrapper'>
-        <p className='nav-link'>Home</p>
+        <NavLink to={`/`} className='nav-link'>Home</NavLink>
+        <NavLink to={`/donation-request`} className='nav-link'>Request a Donation</NavLink>
         <p className='nav-link'>Community Board</p>
-        <p className='nav-link'>Request a Donation</p>
         <p className='nav-link'>Profile</p>
+
       </div>
     </header>
   )

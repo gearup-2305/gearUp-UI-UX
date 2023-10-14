@@ -22,14 +22,14 @@ const DonationRequest = () => {
                     <div className='project-details-one-container'>
                         <label className='project-form-label'  htmlFor='Project Title'>Project Title:</label>
                         <input
-                            className="form-input"
+                            className="request-form-input"
                             type="text"
                             placeholder="Project Title"
                             name="Project title"
                         />
                         <label className='project-form-label'  htmlFor='Project Description'>Project Description:</label>
                         <input
-                            className="form-input"
+                            className="request-form-input"
                             type="text"
                             placeholder="Project Description"
                             name="Project Description"
@@ -38,14 +38,14 @@ const DonationRequest = () => {
                     <div className='project-details-two-container'>  
                         <label className='project-form-label'  htmlFor='Project Image'>Project Image:</label>
                             <input
-                                className="form-input"
+                                className="request-form-input"
                                 type="url"
                                 placeholder="Project Image"
                                 name="Project Image"
                             />
                             <label className='project-form-label'  htmlFor='Dollar Amount Requested'>Dollar Amount Requested:</label>
                             <input
-                                className="form-input"
+                                className="request-form-input"
                                 type="text"
                                 placeholder="Dollar Amount Requested"
                                 name="Dollar Amount Requested"

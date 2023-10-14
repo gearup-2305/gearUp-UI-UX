@@ -1,6 +1,6 @@
 import './DonationRequest.css'
 import hero from '../../assets/hero.png'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 
 const DonationRequest = () => {

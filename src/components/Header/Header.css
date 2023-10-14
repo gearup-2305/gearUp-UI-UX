@@ -33,3 +33,9 @@
     width: 60%;
     justify-content: space-between
 }
+
+.nav-link {
+    cursor: pointer;
+    color: white;
+    margin: 0;
+}

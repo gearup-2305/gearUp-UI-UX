@@ -1,0 +1,115 @@
+.hero-container {
+    display: flex;
+    margin-top: 7.5em;
+}
+
+.hero-container h2 {
+    font-size: 2em;
+
+}
+
+.image-container {
+    width: 50%;
+    height: 100%;
+}
+
+.hero-img {
+    height: 20em;
+    width: auto;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: #E1EFF4;
+    padding: .8em;
+    font-family: Antic Didone;
+    margin-bottom: .2em;
+}
+
+.description-container h2 {
+    font-family: Antic Didone;
+    color: black;
+    line-height: 1.6em;
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 0;
+}
+
+.description-container p {
+    font-family: 'montserrat';
+    line-height: 1.6em;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 0;
+}
+
+.request-form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: -4em;
+}
+
+.request-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 80%;
+    height: 65%;
+
+    background-color: #F8D59D;
+}
+
+.request-form-container h2 {
+    font-family: Antic Didone;
+    color: black;
+}
+
+.request-form-input,
+.project-form-label {
+    font-family: 'montserrat';
+    font-size: 1.3em;
+    width: 15em;
+}
+
+.project-form-label {
+    margin-top: 2em;
+}
+
+.request-form-input {
+    margin-top: .75em;
+}
+
+.project-details {
+    display: flex;
+    width: 100%;
+}
+
+.project-details-one-container,
+.project-details-two-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 50%;
+}
+
+.project-submit-button {
+    font-family: 'montserrat';
+    font-size: 1.2em;
+    color: white;
+    background: #025779;
+    border-radius: 25px;
+    border: none;
+    height: 2em;
+    width: 17em;
+    margin-top: 4em;
+}

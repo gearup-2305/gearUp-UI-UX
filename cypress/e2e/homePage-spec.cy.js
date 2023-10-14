@@ -17,7 +17,6 @@ describe('Test Home Page', () => {
     });
   
     it('Visit donation request age from home page', () => {
-      cy.visit('http://localhost:3000/')
       cy.get('.nav-wrapper')
       cy.get('[href="/donation-request"]').click()
       cy.visit('http://localhost:3000/donation-request')

@@ -38,6 +38,21 @@ describe('Test Home Page', () => {
      cy.get('button')
        .contains('Submit Donation Request')
 
+      it('Form value should update when user enters information', () => {
+      //title
+      cy.get('input[name="Project Title"]').type('Project Title Sample')
+      cy.get('input[name="Project Title"]').should('have.attr', 'value', 'Project Title Sample')
+      //description
+      cy.get('input[name="Project Description"]').type('Project Description Sample')
+      cy.get('input[name="Project Description"]').should('have.attr', 'value', 'Project Description Sample')
+      //image
+      cy.get('input[name="Project Image"]').type('projectImageSample.jpg')
+      cy.get('input[name="Project Image"]').should('have.attr', 'value', 'projectImageSample.jpg')
+      //amount requested
+      cy.get('input[name="Dollar Amount Requested"]').type(100)
+      cy.get('input[name="Dollar Amount Requested"]').should('have.attr', 'value', '$100')
+    })
+
     })
 
 

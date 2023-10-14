@@ -2,6 +2,7 @@
 import './App.css';
 // import { onError } from '@apollo/client/link/error'
 import Header from './components/Header/Header'
+import HomePage from './components/HomePage/HomePage'
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { LOAD_ARTISTS } from './GraphQL/Queries';
 // import { useEffect, useState } from 'react';
@@ -28,6 +29,7 @@ function App() {
     <ApolloProvider client={client}>
         {" "}
         <Header/>
+        <HomePage/>
     </ApolloProvider>
   );
 }

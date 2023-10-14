@@ -1,5 +1,5 @@
 import './HomePage.css'
-import Together from '../../together.png'
+import Together from '../../assets/together.png'
 
 const HomePage = () => {
     return (

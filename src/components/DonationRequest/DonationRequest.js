@@ -1,5 +1,5 @@
 import './DonationRequest.css'
-import hero from '../../hero.png'
+import hero from '../../assets/hero.png'
 
 
 const DonationRequest = () => {

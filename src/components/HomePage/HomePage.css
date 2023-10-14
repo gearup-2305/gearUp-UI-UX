@@ -1,11 +1,16 @@
 .home-container {
     display: flex;
     margin-top: 7.5em;
-    height: 50%
+}
+
+.image-container {
+    width: 50%;
+    height: 100%;
 }
 
 .together-img {
-    width: 60em;
+    height: 30em;
+    width: auto;
 }
 
 .description-container {
@@ -14,14 +19,17 @@
     align-items: center;
     height: auto;
     background-color: #E1EFF4;
-    padding: .5em;
+    padding: .8em;
     font-family: Antic Didone;
+    margin-bottom: .2em;
 }
 
 .description-container p {
     font-family: 'montserrat';
     line-height: 1.6em;
     font-size: 1.2em;
+    text-align: center;
+    margin-top: 0;
 }
 
 .description-container button {
@@ -41,7 +49,8 @@
     justify-content: center;
     align-items: center;
     background-image: url('../../frame.png');
-    background-repeat: none;
-    height: 55%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 65%;
     width: 100%;
 }

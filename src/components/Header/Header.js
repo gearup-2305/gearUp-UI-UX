@@ -1,8 +1,6 @@
 import './Header.css'
-// import GearUpLogo from '../../GearUpLogo.png'
 // import { NavLink } from 'react-router-dom'
 // import PropTypes from 'prop-types'
-
 
 const Header = () => {
   return (

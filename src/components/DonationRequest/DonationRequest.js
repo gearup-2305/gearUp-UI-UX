@@ -25,7 +25,7 @@ const DonationRequest = () => {
                             className="request-form-input"
                             type="text"
                             placeholder="Project Title"
-                            name="Project title"
+                            name="Project Title"
                         />
                         <label className='project-form-label'  htmlFor='Project Description'>Project Description:</label>
                         <input

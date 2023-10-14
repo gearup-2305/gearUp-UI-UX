@@ -43,6 +43,5 @@ describe('Test Home Page', () => {
         .should('contain', 'GearUp connects a widespread community of donors with thriving artists who are eager to bring their artistic vision to life.')
   
     })
-  
 
 })

@@ -1,6 +1,4 @@
-// import { Routes, Route } from 'react-router-dom';
 import './App.css';
-// import { onError } from '@apollo/client/link/error'
 import Header from './components/Header/Header'
 import HomePage from './components/HomePage/HomePage'
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';

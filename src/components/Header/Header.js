@@ -13,7 +13,8 @@ const Header = () => {
       <div className='nav-wrapper'>
         <NavLink to={`/`} className='nav-link'>Home</NavLink>
         <NavLink to={`/donation-request`} className='nav-link'>Request a Donation</NavLink>
-        <p className='nav-link'>Community Board</p>
+        <NavLink to={'/community-board'} className='nav-link'>Community Board</NavLink>
+        
         <p className='nav-link'>Profile</p>
 
       </div>

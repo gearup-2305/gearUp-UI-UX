@@ -1,9 +1,9 @@
 import './HomePage.css'
 import Together from '../../assets/together.png'
-import { Link } from 'react-router-dom';
 
 
-const HomePage = () => {
+const HomePage = ({setLoginAccess}) => {
+
     return (
         <div className='home-container'>
             <div className='image-container'>
@@ -14,7 +14,8 @@ const HomePage = () => {
                 <p className='description'>GearUp connects a widespread community of donors with thriving artists who are eager to bring their artistic vision to life.</p>
                 <div className='login-container'>
                     <h2 className='login-home-heading'>Art you an artist?</h2>
-                    <Link className='login-link' to={`/login-form`}>Login to get support.</Link>
+                    <button onClick={() => {setLoginAccess(true)}} className='login-link'>click me</button>
+                    {/* <Link className='login-link' to={`/login-form`}>Login to get support.</Link> */}
                 </div>
             </div>
         </div>

@@ -33,3 +33,21 @@ query artists {
     }
 }
 `
+
+export const LOAD_SINGLE_USER = gql`
+  query artist ($id: ID!) {
+    artist (id: $id) {
+      city
+      createdAt
+      email
+      id
+      medium
+      name
+      passwordDigest
+      profileImage
+      state
+      updatedAt
+      zipcode
+  }
+}
+`

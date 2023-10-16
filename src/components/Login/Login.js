@@ -1,10 +1,11 @@
 import './Login.css'
 
 
-function LoginForm() {
+function LoginForm({loginAccess, setLoginAccess}) {
 
   return (
-    <div className='login-form-container'>
+    // <div className='login-form-container'>
+      <div className={`login-form-container ${loginAccess ? 'active' : ''}`}>
     <form className="login-form">
       <h2>Please Log In:</h2>
       <label className='login-form-label'  htmlFor='Username'>Username:</label>
@@ -26,6 +27,7 @@ function LoginForm() {
         readOnly
       />
       <button className='login-button' >Login</button>
+      <button onClick={() => {setLoginAccess(false)}} className='login-button'>Cancel</button>
     </form>
     </div>
   )

@@ -4,12 +4,13 @@ import HomePage from './components/HomePage/HomePage';
 import DonationRequest from './components/DonationRequest/DonationRequest';
 import Login from './components/Login/Login';
 import CommunityBoard from './components/CommunityBoard/CommunityBoard';
+import Profile from './components/Profile/Profile';
 
 import { Routes, Route,  } from 'react-router-dom';
 
 
 import { ApolloClient, InMemoryCache, ApolloProvider, useQuery } from '@apollo/client';
-import { LOAD_ARTISTS } from './GraphQL/Queries';
+// import { LOAD_ARTISTS } from './GraphQL/Queries';
 import { useState } from 'react';
 
 const client = new ApolloClient({
@@ -19,6 +20,7 @@ const client = new ApolloClient({
 
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState('')
   const [loginAccess, setLoginAccess] = useState(false)
   
   return (
@@ -29,6 +31,7 @@ function App() {
           <Route path="/" element={<HomePage setLoginAccess={setLoginAccess} />}/>
           <Route path="donation-request" element={<DonationRequest/>}/>
           <Route path='community-board' element={<CommunityBoard/>}/>
+          <Route path='profile' element={<Profile/>}/>
           {/* <Route path="login-form" element={<Login/>}/> */}
       </Routes>
     </ApolloProvider>

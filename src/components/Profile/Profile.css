@@ -1,0 +1,86 @@
+.details-container {
+    display: flex;
+    margin-top: 7.5em;
+}
+
+.profile-details-container {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background: rgb(225, 239, 244);
+    padding: 1em;
+}
+
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    display: flex;
+    width: 8em;
+    height: auto;
+}
+
+.artist-details {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.profile-details-container p {
+    font-family: 'montserrat';
+}
+
+.artist-welcome {
+    color: black;
+    padding-left: 1em;
+    font-family: Antic Didone;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black !important;
+    width: 100%;
+
+}
+
+.single-project-container {
+    display: flex;
+    flex-direction: column;
+    background: rgb(225, 239, 244);
+    color: black !important;
+    margin: 2em;
+    padding: 1em;
+    border-radius: 1em;
+    width: 85%;
+}
+
+.projects-container h2{
+    color: black;
+    font-family: 'montserrat';
+}
+
+.single-project-container p{
+    color: black;
+    font-family: 'montserrat';
+}
+
+.single-project-container h3{
+    color: black;
+    font-family: 'montserrat';
+}
+
+.projects-heading-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Antic Didone;
+    font-size: .75em;
+    background: rgb(225, 239, 244);
+    width: 100%;
+}

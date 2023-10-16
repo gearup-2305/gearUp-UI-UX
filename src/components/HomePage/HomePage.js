@@ -14,7 +14,7 @@ const HomePage = ({setLoginAccess}) => {
                 <p className='description'>GearUp connects a widespread community of donors with thriving artists who are eager to bring their artistic vision to life.</p>
                 <div className='login-container'>
                     <h2 className='login-home-heading'>Art you an artist?</h2>
-                    <button onClick={() => {setLoginAccess(true)}} className='login-link'>click me</button>
+                    <button onClick={() => {setLoginAccess(true)}} className='login-link'>Login to Get Support</button>
                     {/* <Link className='login-link' to={`/login-form`}>Login to get support.</Link> */}
                 </div>
             </div>

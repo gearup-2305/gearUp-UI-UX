@@ -3,6 +3,7 @@ import './Profile.css'
 // import { LOAD_SINGLE_USER } from '../../GraphQL/Queries';
 // import { useState, useEffect } from 'react';
 import ProfilePic from '../../assets/user-icon.png'
+import Projects from '../Projects/Projects';
 
 
 const Profile = ({loginAccess, loggedInUser}) => {
@@ -42,14 +43,9 @@ const Profile = ({loginAccess, loggedInUser}) => {
             <div className='projects-heading-container'>
               <h2 className='projects-heading'>All Projects:</h2>
             </div>
-            {loggedInUser.posts.map(post => (
-              <div className='single-project-container'>
-                <h3 key={post.id}>🎨 Project: {post.title}</h3>
-                <p key={post.id}>Details: {post.details}</p>
-                <p key={post.id}>Requested Amount: ${post.requestedAmount}</p>
-                <p key={post.id}>Amount Raised: ${post.currentAmount}</p>
-              </div>
-            ))}
+            <div className='single-project-container'>
+              <Projects loggedInUser={loggedInUser} />
+            </div>
           </div>
         </div>
       </section>

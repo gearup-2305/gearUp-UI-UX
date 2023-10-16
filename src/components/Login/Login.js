@@ -6,7 +6,7 @@ import { LOAD_ARTISTS } from '../../GraphQL/Queries';
 function LoginForm({loginAccess, setLoginAccess, setLoggedInUser}) {
   const [password, setPassword] = useState('$2a$12$Qm68zSOdKXCoQ3NeDJBYdOQQ4toyKZbCTHhUs9IOSixebWP89MadC')
   const [allArtists, setAllArtists] = useState([])
-  const [singleArtist, setSingleArtist] = useState(null); // Initialize singleArtist state
+  const [singleArtist, setSingleArtist] = useState(null)
 
   const { loading, error, data } = useQuery(LOAD_ARTISTS)
 

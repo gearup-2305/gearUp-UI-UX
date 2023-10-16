@@ -49,7 +49,7 @@
 
 }
 
-.single-project-container {
+/* .single-project-container {
     display: flex;
     flex-direction: column;
     background: rgb(225, 239, 244);
@@ -73,7 +73,7 @@
 .single-project-container h3{
     color: black;
     font-family: 'montserrat';
-}
+} */
 
 .projects-heading-container{
     display: flex;

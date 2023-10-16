@@ -1,0 +1,25 @@
+.single-project {
+    display: flex;
+    flex-direction: column;
+    background: rgb(225, 239, 244);
+    color: black !important;
+    margin: 2em;
+    padding: 1em;
+    border-radius: 1em;
+    width: 85%;
+}
+
+.projects-container h2{
+    color: black;
+    font-family: 'montserrat';
+}
+
+.single-project-container p{
+    color: black;
+    font-family: 'montserrat';
+}
+
+.single-project-container h3{
+    color: black;
+    font-family: 'montserrat';
+}

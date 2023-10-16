@@ -19,7 +19,7 @@
 }
 
 .login-form-container.active {
-    display: flex; /* Show the login form when the active class is applied. */
+    display: flex; 
   }
 
 h2 {

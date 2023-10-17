@@ -4,15 +4,11 @@ export const LOAD_ARTISTS = gql`
 query artists {
     artists {
         city
-        createdAt
-        email
         id
         medium
         name
-        passwordDigest
         profileImage
         state
-        updatedAt
         zipcode
       posts {
         id
@@ -48,6 +44,13 @@ export const LOAD_SINGLE_USER = gql`
       state
       updatedAt
       zipcode
+      posts {
+        id
+        title
+        details
+        requestedAmount
+        currentAmount
+      }
   }
 }
 `

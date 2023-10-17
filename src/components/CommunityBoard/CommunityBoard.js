@@ -2,10 +2,11 @@ import './CommunityBoard.css'
 // import { useQuery } from '@apollo/client';
 // import { useState, useEffect } from 'react';
 // import { LOAD_ARTISTS } from '../../GraphQL/Queries';
+// import Projects from '../Projects/Projects'
 
 const CommunityBoard = () => {
     // const { loading, error, data } = useQuery(LOAD_ARTISTS);
-    // const [users, setUsers] = useState({})
+    // const [donations, setDonations] = useState({})
     
     // useEffect(() => {
     //     if (error) {
@@ -14,13 +15,13 @@ const CommunityBoard = () => {
     //     }
     //     if (!loading && data) {
     //       const artists = data.artists;
-    //       setUsers(artists);
+    //       setDonations(artists);
     //     }
     //   }, [loading, error, data]);
 
-      return (
-        <p>heyyyy</p>
-      )
+    //   return (
+    //     <Projects donations={donations} />
+    //   )
 }
 
 export default CommunityBoard

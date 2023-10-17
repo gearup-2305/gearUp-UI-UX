@@ -22,11 +22,12 @@ const Profile = ({loginAccess, loggedInUser, setLoginAccess, setProfileAccess}) 
         if (!loading && data) {
           const artist = data.artist;
           setUser(artist);
+          setProfileAccess(true)
         }
         console.log(data)
-      }, [loading, error, data]);
+      }, [loading, error, data, setProfileAccess]);
 
-    return loginAccess && (
+    return (
       <section className='details-container' key={user.id}>
         <div className='profile-details-container'>
           <div className='profile-pic-container'>

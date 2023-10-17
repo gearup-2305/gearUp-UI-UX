@@ -1,31 +1,14 @@
-.login-form-container {
-    /* display: flex;
-    flex-direction: column;
+.login-form-container{
+    display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-color: #0000008f;
-    z-index: 9999; */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
+    margin-top: 8.5em;
 }
-
-.login-form-container.active {
-    display: flex; 
-  }
 
 h2 {
     font-family: 'montserrat';
     font-size: 2em;
-    color: white;
+    color: black;
 }
 
 .login-form {
@@ -33,8 +16,8 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    background-color: #0000008f;
-    padding: 5em;
+    background-color: rgb(225, 239, 244);
+    padding: 2em;
     border-radius: 1em;
     gap: 1em;
 }
@@ -42,7 +25,7 @@ h2 {
 .login-form-label {
     font-family: 'montserrat';
     font-size: 2em;
-    color: white;
+    color: black;
 }
 
 .form-input {

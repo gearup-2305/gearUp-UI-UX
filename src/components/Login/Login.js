@@ -1,7 +1,7 @@
 import './Login.css'
 import { Link } from 'react-router-dom'
 
-function Login({ setLoginAccess, loginAccess}) {
+function Login({ setLoginAccess, loginAccess, setProfileAccess}) {
 
   return (
     <div className={`login-form-container`}>
@@ -26,8 +26,10 @@ function Login({ setLoginAccess, loginAccess}) {
             value={'FakePassword?'}
           />
           <Link className='login-link' to={`/profile`} onClick={() => {
-            setLoginAccess(true)
-            }}>Login</Link>
+            setLoginAccess(true) 
+            setProfileAccess(true)
+            }}
+            >Login</Link>
         </form>
       ) : (
         <div>

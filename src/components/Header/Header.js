@@ -2,7 +2,7 @@ import './Header.css'
 import { NavLink } from 'react-router-dom'
 // import PropTypes from 'prop-types'
 
-const Header = () => {
+const Header = ({profileAccess}) => {
   return (
     <header className='header'>
       <div className='title-wrapper'>
@@ -14,9 +14,7 @@ const Header = () => {
         <NavLink to={`/`} className='nav-link'>Home</NavLink>
         <NavLink to={`/donation-request`} className='nav-link'>Request a Donation</NavLink>
         <NavLink to={'/community-board'} className='nav-link'>Community Board</NavLink>
-        <NavLink to={'/profile'} className='nav-link'>Profile</NavLink>
-        {/* <p className='nav-link'>Profile</p> */}
-
+        {profileAccess && <NavLink to={'/profile'} className='nav-link'>🎨 Profile</NavLink>}
       </div>
     </header>
   )

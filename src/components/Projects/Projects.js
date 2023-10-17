@@ -1,8 +1,8 @@
 import React from 'react';
 import './Projects.css';
 
-const Projects = ({ loggedInUser }) => {
-  const projectsDisplay = loggedInUser.posts.map(post => (
+const Projects = ({ user } ) => {
+  const projectsDisplay = user?.posts?.map(post => (
     <div key={post.id} className='single-project'>
       <h3>🎨 Project: {post.title}</h3>
       <p>Details: {post.details}</p>

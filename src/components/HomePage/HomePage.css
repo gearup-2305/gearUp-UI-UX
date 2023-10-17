@@ -53,6 +53,21 @@
     cursor: pointer;
 }
 
+.gear-up-link{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-family: 'montserrat';
+    font-size: 1.2em;
+    color: black;
+    background: #F8D59D;
+    border-radius: 25px;
+    border: none;
+    height: 2em;
+    width: 13em;
+    cursor: pointer;
+}
+
 .login-container {
     display: flex; 
     flex-direction: column;

@@ -11,16 +11,18 @@ import { useState } from 'react';
 
 function App() {
   const [loginAccess, setLoginAccess] = useState(false)
-  
+  const [profileAccess, setProfileAccess] = useState(false)
+
+
   return (
     <>
-        <Header/>
+        <Header profileAccess={profileAccess}/>
         <Routes>
-          <Route path="/" element={<HomePage setLoginAccess={setLoginAccess}/>}/>
+          <Route path="/" element={<HomePage setLoginAccess={setLoginAccess} loginAccess={loginAccess}/>}/>
           <Route path="donation-request" element={<DonationRequest/>}/>
           <Route path='community-board' element={<CommunityBoard/>}/>
-          <Route path='profile' element={<Profile loginAccess={loginAccess} setLoginAccess={setLoginAccess} />}/>
-          <Route path="login-form" element={<Login setLoginAccess={setLoginAccess} loginAccess={loginAccess}  />}/>
+          <Route path='profile' element={<Profile loginAccess={loginAccess} setLoginAccess={setLoginAccess} setProfileAccess={setProfileAccess}/>}/>
+          <Route path="login-form" element={<Login setLoginAccess={setLoginAccess} loginAccess={loginAccess} setProfileAccess={setProfileAccess} />}/>
       </Routes>
    </>  
   );

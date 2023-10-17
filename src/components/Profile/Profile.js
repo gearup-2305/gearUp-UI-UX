@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 
 
-const Profile = ({loginAccess, loggedInUser, setLoginAccess}) => {
+const Profile = ({loginAccess, loggedInUser, setLoginAccess, setProfileAccess}) => {
     const { loading, error, data } = useQuery(LOAD_SINGLE_USER, {
         variables: { id: 4 },
       });
@@ -22,11 +22,12 @@ const Profile = ({loginAccess, loggedInUser, setLoginAccess}) => {
         if (!loading && data) {
           const artist = data.artist;
           setUser(artist);
+          setProfileAccess(true)
         }
         console.log(data)
-      }, [loading, error, data]);
+      }, [loading, error, data, setProfileAccess]);
 
-    return loginAccess ? (
+    return (
       <section className='details-container' key={user.id}>
         <div className='profile-details-container'>
           <div className='profile-pic-container'>
@@ -38,6 +39,7 @@ const Profile = ({loginAccess, loggedInUser, setLoginAccess}) => {
           <p>Your Preferred Medium: {user.medium}</p>
           <Link className='login-link' to={`/`} onClick={() => {
             setLoginAccess(false)
+            setProfileAccess(false)
             }}>Logout</Link>
         </div>
         <div className='artist-details'>
@@ -53,8 +55,6 @@ const Profile = ({loginAccess, loggedInUser, setLoginAccess}) => {
           </div>
         </div>
       </section>
-    ): (
-      <Link className='login-link extra' to={'/login-form'}>Login</Link>
     )
   };
   

@@ -41,6 +41,7 @@ const Profile = ({loginAccess, loggedInUser, setLoginAccess, setProfileAccess}) 
             setLoginAccess(false)
             setProfileAccess(false)
             }}>Logout</Link>
+            <Link className='donation-offer' to={`/donation-offer`}>Donate</Link>
         </div>
         <div className='artist-details'>
           <h2 className='artist-welcome'>Welcome, {user.name}!</h2>

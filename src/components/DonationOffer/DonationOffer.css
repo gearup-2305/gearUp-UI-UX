@@ -1,0 +1,93 @@
+.donation-offer-hero-container{
+    display: flex;
+    margin-top: 7.5em;
+}
+
+/* .donation-offer-hero-container h2 {
+    font-size: 2em;
+} */
+
+.image-container {
+    width: 50%;
+    height: 100%;
+}
+
+.hero-img {
+    height: 20em;
+    width: auto;
+}
+
+.form-review-container{
+    display: flex;
+    height: 100%;
+}
+
+.offer-form-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+.request-review-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.single-project-review{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    background: rgb(225, 239, 244);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.offer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 85%;
+    height: 100%;
+    padding-bottom: 2em;
+    background-color: #F8D59D;
+    border-radius: 1em;
+}
+
+.request-form-container h2 {
+    font-family: Antic Didone;
+    color: black;
+}
+
+.offer-form-input,
+.offer-form-label {
+    font-family: 'montserrat';
+    font-size: 1.3em;
+    width: 15em;
+}
+
+.offer-form-label {
+    margin-top: 2em;
+}
+
+.offer-form-input {
+    margin-top: .75em;
+}
+
+.offer-submit-button {
+    font-family: 'montserrat';
+    font-size: 1.2em;
+    color: white;
+    background: #025779;
+    border-radius: 25px;
+    border: none;
+    height: 2em;
+    width: 17em;
+    margin-top: 2em;
+}

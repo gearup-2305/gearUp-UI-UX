@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 
 
-const Profile = ({loginAccess, loggedInUser, setLoginAccess, setProfileAccess}) => {
+const Profile = ({setLoginAccess, setProfileAccess}) => {
     const { loading, error, data } = useQuery(LOAD_SINGLE_USER, {
         variables: { id: 4 },
       });

@@ -24,10 +24,7 @@ describe('Test Home Page', () => {
   
     it('Visit login page from home page', () => {
       cy.url().should('eq', 'http://localhost:3000/')
-      cy.get('.home-container')
-      cy.get('.description-container')
-      cy.get('.login-container')
-      cy.get('[href="/login-form"]').click()
+      cy.get('.login-link').click()
       cy.visit('http://localhost:3000/login-form')
   
   });

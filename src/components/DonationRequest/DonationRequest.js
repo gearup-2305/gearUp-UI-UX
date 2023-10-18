@@ -1,14 +1,39 @@
 import './DonationRequest.css'
 import hero from '../../assets/hero.png'
 import { useState } from 'react'
+import { useMutation } from '@apollo/client'
+import { SUBMIT_DONATION_REQUEST } from '../../GraphQL/Mutations'
 
 
 const DonationRequest = () => {
-    const [title, setTitle] = useState('')
-    const [description, setDescription] = useState('')
-    const [image, setImage] = useState('')
-    const [amountRequested, setAmountRequested] = useState(0)
-    // const [isFormValid, setIsFormValid] = useState(false)
+    const [title, setTitle] = useState('test')
+    const [details, setDetails] = useState('testingtesting')
+    const [imageUrl, setImageUrl] = useState('www.imageurl.com')
+    const [requestedAmount, setRequestedAmount] = useState(0)
+    const [artistID, setArtistID] = useState(4)
+    const [currentAmount, setCurrentAmount] = useState(0)
+
+    const [createDonationRequest] = useMutation(SUBMIT_DONATION_REQUEST)
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+
+        createDonationRequest({
+            variables: {
+                title: title,
+                details: details,
+                imageUrl: imageUrl,
+                requestedAmount: parseFloat(requestedAmount), 
+                currentAmount: parseFloat(currentAmount),     
+                artistID: parseInt(artistID),
+            }
+        }).then((response) => {
+            console.log('Mutation Response:', response);
+        })
+        .catch((error) => {
+            console.error('Mutation Error:', error);
+        });
+    }
 
 
 // Setting up functionality to check if form is valid
@@ -64,9 +89,9 @@ const DonationRequest = () => {
                             type="text"
                             placeholder="Enter Project Description"
                             name="Project Description"
-                            value={description}
+                            value={details}
                             onChange={(e) => {
-                                setDescription(e.target.value)
+                                setDetails(e.target.value)
                             }}
                         />
                     </div>
@@ -77,9 +102,9 @@ const DonationRequest = () => {
                                 type="url"
                                 placeholder="Upload Project Image"
                                 name="Project Image"
-                                value={image}
+                                value={imageUrl}
                                 onChange={(e) => {
-                                setImage(e.target.value)
+                                setImageUrl(e.target.value)
                             }}
                             />
                             <label className='project-form-label'  htmlFor='Dollar Amount Requested'>Dollar Amount Requested:</label>
@@ -88,17 +113,17 @@ const DonationRequest = () => {
                                 type="money"
                                 placeholder="Dollar Amount Requested"
                                 name="Dollar Amount Requested"
-                                value={'$' + amountRequested}
+                                value={'$' + requestedAmount}
                                 onChange={(e) => {
                                     const inputValue = e.target.value;
                                     const numericValue = inputValue.replace(/[^0-9.]/g, '');
-                                    setAmountRequested(numericValue)
+                                    setRequestedAmount(numericValue)
                             }}
                             />
                                    
                     </div>
                 </div>
-            <button className='project-submit-button'>Submit Donation Request</button>
+            <button className='project-submit-button' onClick={(e) => handleFormSubmit(e)} >Submit Donation Request</button>
             </form>
         </div>
 </>

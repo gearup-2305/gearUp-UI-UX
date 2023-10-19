@@ -25,7 +25,7 @@ const Profile = ({setLoginAccess, setProfileAccess}) => {
     
       if (error) {
         console.error('Error fetching data:', error)
-        return <Error/>
+        return <Error error={error}/>
       }
       
       return (

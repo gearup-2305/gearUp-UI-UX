@@ -21,7 +21,7 @@ const CommunityBoard = () => {
     
     if (error) {
       console.error('Error fetching data:', error)
-      return <Error/>
+      return <Error error={error}/>
     }
 
       const allDonationRequests = data && donations?.artists?.map( user => {

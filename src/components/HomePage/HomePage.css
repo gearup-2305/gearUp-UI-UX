@@ -94,7 +94,7 @@
     flex-direction: column;
     margin-top: 2em;
     margin-bottom: 2em;
-    height: 40em;
+    height: 50em;
 }
 
 
@@ -128,13 +128,20 @@
 
 .artist-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: flex-end;
     width: 50%;
+    padding-bottom: 4em;
+    padding-left: 2em;
+}
+
+.artist-heading{
+    font-family: Antic Didone;
 }
 
 .artist-img {
-    width: 30em;
-    height: auto;
+    height: 25em;
     border-radius: 10em;
 }
 
@@ -144,33 +151,32 @@
     align-items: center;
     justify-content: center;
 
-    width: 50%;
+    width: 60%;
     height: 100%;
 
-    padding: .8em;
-    margin-bottom: .2em;
+    /* padding: .8em; */
 
     background-image: url("/src/assets/quote.png");
     background-repeat: no-repeat;
-    background-position: left;
-    background-size: 90%;
+    background-position: -5% -7%;    
+    background-size: 100%;
 }
 
 .quote {
-    width: 85%;
+    width: 60%;
     padding: 0;
-    margin-right: 5em;
-    margin-bottom: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    /* margin-right: 5em; */
+    margin-bottom: 0;
     text-align: center;
-    background: rgba(255, 255, 255, 0.821);
-}
-
-.quote-container p {
-    font-size: 1em;    
     font-family: 'montserrat';
     color: black;
-    font-size: 1.2em;
+    line-height: 1.5em;
+    font-size: 1.3em;
+}
 
+#artist-name {
+    margin-top: 0;
+    font-style: italic;
+    font-size: .75em;    
+    margin-bottom: 10em;
 }

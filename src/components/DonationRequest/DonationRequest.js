@@ -5,9 +5,6 @@ import { useMutation } from '@apollo/client'
 import { SUBMIT_DONATION_REQUEST } from '../../GraphQL/Mutations'
 import { useNavigate } from 'react-router-dom'
 
-
-
-
 const DonationRequest = () => {
     const [title, setTitle] = useState('')
     const [details, setDetails] = useState('')

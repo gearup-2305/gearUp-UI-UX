@@ -4,45 +4,31 @@ import grows from '../../assets/artGrow.png'
 import paintPalleteBlack from '../../assets/paint-black.png'
 import { useMutation } from '@apollo/client';
 import { useState } from 'react'
-import { CREATE_DONATION } from '../../GraphQL/Mutations';
+import { SUBMIT_DONATION_OFFER } from '../../GraphQL/Mutations';
 
 const DonationOffer = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [amount, setAmount] = useState('')    
-    const [createDonation] = useMutation(CREATE_DONATION)
-
+    const [createDonation] = useMutation(SUBMIT_DONATION_OFFER)
 
 const handleFormSubmit = (e) => {
     e.preventDefault();
-  
-    onCreateDonation({
-      input: {
-        name: name,
-        email: email,
-        postId: 4,
-        amount: parseFloat(amount)
-      }
-    })
-      .then((response) => {
-        console.log('Donation created:', response.data);
+    
+    createDonation({
+        variables: {
+          name: name,
+          email: email,
+          postId: parseFloat(1),
+          amount: parseFloat(amount)
+        }
+      }).then((response) => {
+        console.log('Donation created:', response);
       })
       .catch((error) => {
         console.error('Error creating donation:', error);
       });
   };
-
-const onCreateDonation = async (input) => {
-    try {
-      const { data } = await createDonation({ variables: { input } });
-      console.log(data);
-      return data; 
-    } catch (error) {
-      console.error('Error creating donation:', error);
-      throw error; 
-    }
-  };
-  
 
   return (
     <>

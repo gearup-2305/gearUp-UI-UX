@@ -8,14 +8,15 @@ import Error from '../Error/Error';
 
 
 const CommunityBoard = () => {
-    const { loading, error, data } = useQuery(LOAD_ARTISTS);
+    const { loading, error, data, refetch } = useQuery(LOAD_ARTISTS);
     const [donations, setDonations] = useState({})
 
     useEffect(() => {
+      refetch()
       if (!loading && data) {
         setDonations(data)
       }
-    },[loading, error, data])
+    },[loading, error, data, refetch])
 
     if (loading) return <Loading/>
     

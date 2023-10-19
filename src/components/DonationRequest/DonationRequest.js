@@ -3,15 +3,20 @@ import hero from '../../assets/hero.png'
 import { useState } from 'react'
 import { useMutation } from '@apollo/client'
 import { SUBMIT_DONATION_REQUEST } from '../../GraphQL/Mutations'
+import { useNavigate } from 'react-router-dom'
+
+
 
 
 const DonationRequest = () => {
-    const [title, setTitle] = useState('test')
-    const [details, setDetails] = useState('testingtesting')
-    const [imageUrl, setImageUrl] = useState('www.imageurl.com')
+    const [title, setTitle] = useState('')
+    const [details, setDetails] = useState('')
+    const [imageUrl, setImageUrl] = useState('www.image.url')
     const [requestedAmount, setRequestedAmount] = useState(0)
     // const [artistID, setArtistID] = useState(4)
     // const [currentAmount, setCurrentAmount] = useState(0)
+    const navigate = useNavigate()
+  
 
     const [createDonationRequest] = useMutation(SUBMIT_DONATION_REQUEST)
 
@@ -28,10 +33,11 @@ const DonationRequest = () => {
                 artistID: parseInt(4),
             }
         }).then((response) => {
-            console.log('Mutation Response:', response);
+            console.log('Mutation Response:', response)
+            navigate('/community-board')
         })
         .catch((error) => {
-            console.error('Mutation Error:', error);
+            console.error('Mutation Error:', error)
         });
     }
 

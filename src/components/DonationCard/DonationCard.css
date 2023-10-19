@@ -1,0 +1,73 @@
+.donation-card {
+    display: flex;
+    flex-direction: column;
+    background: rgb(225, 239, 244);
+    color: black !important;
+    margin: 2em;
+    padding: 1em;
+    border-radius: 1em;
+    width: 50%;
+}
+
+.donation-card h2{
+    color: black;
+    font-family: 'montserrat';
+}
+
+.donation-card p{
+    color: black;
+    font-family: 'montserrat';
+}
+
+.donation-card h3{
+    color: black;
+    font-family: 'montserrat';
+}
+
+.profile-button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.profile-container {
+    display: flex;
+    width: 100%;
+}
+
+.personal-details-container h3 {
+    margin: 0;
+}
+
+.personal-details-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    width: 75%;
+}
+
+.profile-image-card {
+    height: 5em;
+    width: auto;
+}
+
+.donation-amounts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.donation-offer {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-family: 'montserrat';
+    font-size: 1em;
+    color: white;
+    background: #025779;
+    border-radius: 25px;
+    border: none;
+    height: 2em;
+    width: 9em;
+    margin-bottom: 2em;
+    cursor: pointer;
+}

@@ -6,8 +6,6 @@ import ProfilePic from '../../assets/user-icon.png'
 import Projects from '../Projects/Projects';
 import { Link } from 'react-router-dom'
 
-
-
 const Profile = ({setLoginAccess, setProfileAccess}) => {
     const { loading, error, data } = useQuery(LOAD_SINGLE_USER, {
         variables: { id: 4 },

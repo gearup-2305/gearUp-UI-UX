@@ -6,6 +6,7 @@ import ProfilePic from '../../assets/user-icon.png'
 import Projects from '../Projects/Projects';
 import { Link } from 'react-router-dom'
 import Loading from '../Loading/Loading';
+import Error from '../Error/Error';
 
 const Profile = ({setLoginAccess, setProfileAccess}) => {
     const { loading, error, data } = useQuery(LOAD_SINGLE_USER, {
@@ -15,16 +16,16 @@ const Profile = ({setLoginAccess, setProfileAccess}) => {
 
       useEffect(() => {
         if (!loading && data) {
-          setUser(data.artist);
-          setProfileAccess(true);
+          setUser(data.artist)
+          setProfileAccess(true)
         }
-      }, [loading, error, data, setProfileAccess]);
+      }, [loading, error, data, setProfileAccess])
     
       if (loading) return <Loading/>
     
       if (error) {
-        console.error('Error fetching data:', error);
-        return <p>Error: {error.message}</p>;
+        console.error('Error fetching data:', error)
+        return <Error/>
       }
       
       return (

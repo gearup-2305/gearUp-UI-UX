@@ -88,3 +88,89 @@
     font-size: 1.4em !important;
     margin-top: 1em !important;
 }
+
+.testimonial-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    height: 40em;
+}
+
+
+.description-two-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    background-color: #F8D59D;;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-bottom: .2em;
+}
+
+.description-two-container h2 {
+    font-size: 2em;
+    margin: .5em;
+}
+
+.description-two-container p {
+    font-family: 'montserrat';
+    line-height: 1.7em;
+    font-size: 1.4em;
+}
+
+.testimonial-artist-container{
+    display: flex;
+    margin-top: 3em;
+    height: 100%;
+}
+
+.artist-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.artist-img {
+    width: 30em;
+    height: auto;
+    border-radius: 10em;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 50%;
+    height: 100%;
+
+    padding: .8em;
+    margin-bottom: .2em;
+
+    background-image: url("/src/assets/quote.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 90%;
+}
+
+.quote {
+    width: 85%;
+    padding: 0;
+    margin-right: 5em;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.821);
+}
+
+.quote-container p {
+    font-size: 1em;    
+    font-family: 'montserrat';
+    color: black;
+    font-size: 1.2em;
+
+}

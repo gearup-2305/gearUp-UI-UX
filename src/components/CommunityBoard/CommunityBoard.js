@@ -25,7 +25,7 @@ const CommunityBoard = () => {
     }
 
       const allDonationRequests = data && donations?.artists?.map( user => {
-        return (<DonationCard user={user} />)
+        return (<DonationCard key={user.id} user={user} />)
       })
 
       return (

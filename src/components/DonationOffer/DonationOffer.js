@@ -1,6 +1,8 @@
 import './DonationOffer.css'
-import hero from '../../assets/hero.png'
-import grow from '../../assets/grow.png'
+// import hero from '../../assets/hero.png'
+import grows from '../../assets/artGrow.png'
+
+import paintPalleteBlack from '../../assets/paint-black.png'
 import { useMutation } from '@apollo/client';
 import { useState } from 'react'
 import { CREATE_DONATION } from '../../GraphQL/Mutations';
@@ -71,12 +73,12 @@ const onCreateDonation = async (input) => {
   return (
     <>
         <div className='donation-offer-hero-container'>
-            <div className='description-container'>
+            <div className='offer-donation-description-container'>
                 <h2 className='heading'>Your Support Makes an Impact</h2>
                 <p className='description'>The most trusted site for artists to get support bringing their vision to life. As an artist-founded organization, we're trusted by artists, donors, and communities across the country.</p>
             </div>
-            <div className='image-container'>
-                <img className='hero-img' src={hero} alt=''/>
+            <div className='hero-image-container'>
+                <img className='hero-img' src={paintPalleteBlack} alt=''/>
             </div>
         </div>
         <div className='form-review-container'>
@@ -89,7 +91,7 @@ const onCreateDonation = async (input) => {
                     <p>Amount Raised: $$$</p>
                 </div> 
                 <div className='image-placeholder'>
-                    <img className='hero-img' src={grow} alt=''/>
+                    <img className='hero-img' src={grows} alt=''/>
                 </div> 
             </div>
             <div className='offer-form-container'>

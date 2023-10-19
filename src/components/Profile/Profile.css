@@ -89,18 +89,3 @@
     margin-top: 300px;
 }
 
-.donation-offer {
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    font-family: 'montserrat';
-    font-size: 1.2em;
-    color: white;
-    background: #025779;
-    border-radius: 25px;
-    border: none;
-    height: 2em;
-    width: 13em;
-    margin-bottom: 2em;
-    cursor: pointer;
-}

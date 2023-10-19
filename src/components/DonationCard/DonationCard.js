@@ -23,7 +23,7 @@ const DonationCard = ({ user }) => {
         </div>
       </div>
       <div className='project-details-card'>
-        <div key={post.id} className='single-project-card'>
+        <div className='single-project-card'>
           <h3>🎨 Project: {post.title}</h3>
           <p>Details: {post.details}</p>
           <div className="donation-amounts">

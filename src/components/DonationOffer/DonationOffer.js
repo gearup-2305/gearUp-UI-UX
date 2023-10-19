@@ -12,31 +12,6 @@ const DonationOffer = () => {
     const [amount, setAmount] = useState('')    
     const [createDonation] = useMutation(CREATE_DONATION)
 
-//  const handleFormSubmit = (e) => {
-//         e.preventDefault();
-    
-//         onCreateDonation({
-//             input: {
-//                 name: name,
-//                 email: email,
-//                 postId: 4,
-//                 amount: parseFloat(amount)
-//             }
-//         }).then((response) => {
-//             console.log('Donation created:', response);
-//         }).catch((error) => {
-//             console.error('Error creating donation:', error);
-//         });
-//     }
-
-//   const onCreateDonation = async (input) => {
-//     try {
-//       const data = await createDonation({ variables: { input } });
-//       console.log(data)
-//     } catch (error) {
-//         console.log(error)
-//     }
-//   };
 
 const handleFormSubmit = (e) => {
     e.preventDefault();

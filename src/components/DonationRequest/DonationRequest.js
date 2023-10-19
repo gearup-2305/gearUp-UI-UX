@@ -10,8 +10,8 @@ const DonationRequest = () => {
     const [details, setDetails] = useState('testingtesting')
     const [imageUrl, setImageUrl] = useState('www.imageurl.com')
     const [requestedAmount, setRequestedAmount] = useState(0)
-    const [artistID, setArtistID] = useState(4)
-    const [currentAmount, setCurrentAmount] = useState(0)
+    // const [artistID, setArtistID] = useState(4)
+    // const [currentAmount, setCurrentAmount] = useState(0)
 
     const [createDonationRequest] = useMutation(SUBMIT_DONATION_REQUEST)
 
@@ -24,8 +24,8 @@ const DonationRequest = () => {
                 details: details,
                 imageUrl: imageUrl,
                 requestedAmount: parseFloat(requestedAmount), 
-                currentAmount: parseFloat(currentAmount),     
-                artistID: parseInt(artistID),
+                currentAmount: parseFloat(0),     
+                artistID: parseInt(4),
             }
         }).then((response) => {
             console.log('Mutation Response:', response);

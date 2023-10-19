@@ -1,5 +1,4 @@
 import './DonationOffer.css'
-// import hero from '../../assets/hero.png'
 import grows from '../../assets/artGrow.png'
 
 import paintPalleteBlack from '../../assets/paint-black.png'
@@ -139,37 +138,4 @@ const onCreateDonation = async (input) => {
 }
 
 export default DonationOffer
-
-
- //     }).then((response) => {
-    //         console.log('Donation created:', response);
-    //         console.log(data)
-    //     }).catch((error) => {
-    //         console.error('Error creating donation:', error);
-    //     });
-    // }
-
-
-
-    // keeping in email - if guest user makes a donation and their email matches a user profile, the next time they sign in it will be displayed on their profile
-
-    // const [isFormValid, setIsFormValid] = useState(false)
-
-    // useEffect(() => {
-    //     if (!title, !description, !amount) {
-    //         setIsFormValid(true)
-    //     } else {
-    //         setIsFormValid(false)
-    //     }
-    // }, [name, email, amount])
-
-
-// Clear form inputs
-    // function clearInput () {
-    //     setName('')
-    //     setEmail(0)
-    //     setAmount('')
-    // }
-
-    
 

@@ -2,7 +2,6 @@ import './CommunityBoard.css'
 import { useQuery } from '@apollo/client';
 import { useState, useEffect } from 'react';
 import { LOAD_ARTISTS } from '../../GraphQL/Queries';
-// import Projects from '../Projects/Projects'
 import DonationCard from '../DonationCard/DonationCard'
 
 

@@ -1,0 +1,60 @@
+.center-loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0257797b;
+  }
+
+.lds-grid {
+    position: relative;
+    width: 15vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .lds-grid div {
+    width: 75px;
+    height: 118px;
+    border-radius: 50%;
+    background: #025779;
+    animation: lds-grid 1.2s linear infinite;
+  }
+  .lds-grid div:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .lds-grid div:nth-child(2) {
+    animation-delay: -0.4s;
+  }
+  .lds-grid div:nth-child(3) {
+    animation-delay: -0.8s;
+  }
+  .lds-grid div:nth-child(4) {
+    animation-delay: -0.4s;
+  }
+  .lds-grid div:nth-child(5) {
+    animation-delay: -0.8s;
+  }
+  .lds-grid div:nth-child(6) {
+    animation-delay: -1.2s;
+  }
+  .lds-grid div:nth-child(7) {
+    animation-delay: -0.8s;
+  }
+  .lds-grid div:nth-child(8) {
+    animation-delay: -1.2s;
+  }
+  .lds-grid div:nth-child(9) {
+    animation-delay: -1.6s;
+  }
+  @keyframes lds-grid {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }

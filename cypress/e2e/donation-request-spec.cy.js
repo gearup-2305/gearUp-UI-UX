@@ -18,11 +18,13 @@ describe('Test Home Page', () => {
   
     it('Should contain hero image with GearUp Request Donation description', () => {
       cy.get('.hero-container')
-      cy.get('.description-container')
+      cy.get('.request-donation-description-container')
       cy.get('h2')
         .should('contain', 'Start Gearing Up')
+        cy.get('h3')
+        .should('contain', 'Get What You Need For Your Art.')
       cy.get('p')
-        .should('contain', 'Get What You Need For Your Art. Connect with a thriving community of donors eager to fund your art projects.')
+        .should('contain', 'Connect with a thriving community of donors eager to fund your art projects.')
     })
 
     it('Should contain request donation form', () => {

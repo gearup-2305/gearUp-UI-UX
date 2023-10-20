@@ -35,7 +35,7 @@ const DonationCard = ({ user }) => {
     </div>
   ));
   
-  return <div>{donationCardDisplay}</div>;
+  return <div className='card-container'>{donationCardDisplay}</div>;
   }  
 
 export default DonationCard;

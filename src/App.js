@@ -24,7 +24,7 @@ function App() {
           <Route path='community-board' element={<CommunityBoard/>}/>
           <Route path='profile' element={<Profile loginAccess={loginAccess} setLoginAccess={setLoginAccess} setProfileAccess={setProfileAccess}/>}/>
           <Route path="login-form" element={<Login setLoginAccess={setLoginAccess} loginAccess={loginAccess} setProfileAccess={setProfileAccess} />}/>
-          <Route path="donation-offer" element={<DonationOffer/>}/>
+          <Route path="/:id" element={<DonationOffer/>}/>
       </Routes>
    </>  
   );

@@ -1,4 +1,3 @@
-import './Testimony.css'
 import painter from '../../../assets/artist-testimonial.png';
 
 const Testimony = () => {

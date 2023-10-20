@@ -56,7 +56,7 @@ export const LOAD_SINGLE_USER = gql`
 `
 
 export const LOAD_PREVIEW_CONTENT = gql`
-  query GetPosts {
+  query Posts {
     posts(orderBy: DESC) {
       id
       title

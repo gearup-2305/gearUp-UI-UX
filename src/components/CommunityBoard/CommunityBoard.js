@@ -25,7 +25,7 @@ const CommunityBoard = () => {
       return <Error error={error}/>
     }
 
-    const artistsWithFilteredPosts = data?.artists?.map(artists => ({
+    const artistsWithFilteredPosts = data&& donations?.artists?.map(artists => ({
       ...artists,
       posts: artists.posts.filter(post => post.requestedAmount > post.currentAmount)
     }))

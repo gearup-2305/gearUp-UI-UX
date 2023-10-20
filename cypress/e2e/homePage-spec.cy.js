@@ -34,9 +34,11 @@ describe('Test Home Page', () => {
       cy.get('.home-container')
       cy.get('.description-container')
       cy.get('h2')
-        .should('contain', 'Help Artists Create Art')
+        .should('contain', 'Start Gearing Up')
+      cy.get('h3')
+        .should('contain', 'Get What You Need For Your Art.')
       cy.get('p')
-        .should('contain', 'GearUp connects a widespread community of donors with thriving artists who are eager to bring their artistic vision to life.')
+        .should('contain', 'Connect with a thriving community of donors eager to fund your art projects.')
   
     })
 

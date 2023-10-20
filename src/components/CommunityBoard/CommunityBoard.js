@@ -13,7 +13,7 @@ const CommunityBoard = () => {
   const [filters, setFilter] = useState(false)
   const [noDonations, setNoDonations] = useState(false)
   const [firstProjects, setFirstProjects] = useState(false)
-
+ 
   useEffect(() => {
     refetch()
     if (error) {
@@ -64,3 +64,5 @@ const CommunityBoard = () => {
 }
 
 export default CommunityBoard
+
+

@@ -1,0 +1,39 @@
+.form-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7.5em;
+    background-color: #F8D59D;
+    width: 25%;
+    height: 100vh;
+}
+
+.form-heading {
+    font-size: 1em;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 15em;
+    height: 15em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+label {
+    font-family: 'montserrat';
+    margin: .5em;
+}
+
+button {
+    width: 8em;
+    font-family: 'montserrat';
+    margin-top: 1em;
+    padding: .5em;
+}

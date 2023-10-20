@@ -7,6 +7,9 @@
     padding: 0.5em;
     position: fixed;
     top: 0;
+    box-shadow: 0px 11px 20px 8px  #0257799e;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .header h1 {
@@ -30,12 +33,23 @@
     flex-direction: row;
     font-family: 'montserrat';
     color: white;
-    width: 60%;
-    justify-content: space-between
+    /* width: 60%; */
+    justify-content: space-between;
+    gap: 5em;
+    padding-right: 4em;
 }
 
 .nav-link {
     cursor: pointer;
     color: white;
     margin: 0;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bolder;
+}
+
+.nav-link.active {
+    transform: scale(1.1);
+    box-shadow: 0px 1px 20px 20px #0a415ad1;
+    background: #0a415ad1;
 }

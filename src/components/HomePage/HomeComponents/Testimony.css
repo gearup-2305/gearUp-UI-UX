@@ -64,6 +64,8 @@
     background-repeat: no-repeat;
     background-size: 60em;
     background-position: center;
+    background-color: rgb(255 255 255 / 39%);
+    padding-top: 5em;
 }
 
 .quote {

@@ -10,15 +10,21 @@ const DonationRequest = () => {
     const [details, setDetails] = useState('')
     const [imageUrl, setImageUrl] = useState('www.image.url')
     const [requestedAmount, setRequestedAmount] = useState(0)
-    // const [artistID, setArtistID] = useState(4)
-    // const [currentAmount, setCurrentAmount] = useState(0)
     const navigate = useNavigate()
+    const [isFormValid, setIsFormValid] = useState(true)
   
 
     const [createDonationRequest] = useMutation(SUBMIT_DONATION_REQUEST)
 
     const handleFormSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
+
+        if (!title || !details || !requestedAmount) {
+             setIsFormValid(false)
+             return
+        } else {
+            setIsFormValid(true)
+        }
 
         createDonationRequest({
             variables: {
@@ -37,27 +43,6 @@ const DonationRequest = () => {
             console.error('Mutation Error:', error)
         });
     }
-
-
-// Setting up functionality to check if form is valid
-
-    // useEffect(() => {
-    //     if (!title, !description, !amountRequested) {
-    //         setIsFormValid(true)
-    //     } else {
-    //         setIsFormValid(false)
-    //     }
-    // }, [title, description, amountRequested])
-
-
-// Clear form inputs
-
-    // function clearInput () {
-    //     setTitle('')
-    //     setAmountRequested(0)
-    //     setDescription('')
-    //     setImage('')
-    // }
 
   return (
 <>
@@ -127,6 +112,9 @@ const DonationRequest = () => {
                     </div>
                 </div>
             <button className='project-submit-button' onClick={(e) => handleFormSubmit(e)} >Submit Donation Request</button>
+                {!isFormValid && (
+                    <p className='missing-form-input-notif'>*One or more required fields is missing</p>
+                )}
             </form>
         </div>
 </>

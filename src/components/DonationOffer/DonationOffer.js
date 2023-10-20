@@ -2,31 +2,44 @@ import './DonationOffer.css'
 import grows from '../../assets/artGrow.png'
 
 import paintPalleteBlack from '../../assets/paint-black.png'
-import { useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/client'
 import { useState } from 'react'
-import { SUBMIT_DONATION_OFFER } from '../../GraphQL/Mutations';
+import { SUBMIT_DONATION_OFFER } from '../../GraphQL/Mutations'
+import { useParams } from 'react-router'
+import { useNavigate } from 'react-router-dom'
 
 const DonationOffer = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [amount, setAmount] = useState('')    
     const [createDonation] = useMutation(SUBMIT_DONATION_OFFER)
+    const { id } = useParams()
+    const navigate = useNavigate()
+    const [isFormValid, setIsFormValid] = useState(true)
 
 const handleFormSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
+
+    if (!name || !email || !amount) {
+        setIsFormValid(false)
+        return
+   } else {
+       setIsFormValid(true)
+   }
     
     createDonation({
         variables: {
           name: name,
           email: email,
-          postId: parseFloat(1),
+          postId: parseFloat(id),
           amount: parseFloat(amount)
         }
       }).then((response) => {
-        console.log('Donation created:', response);
+        console.log('Donation created:', response)
+        navigate('/community-board')
       })
       .catch((error) => {
-        console.error('Error creating donation:', error);
+        console.error('Error creating donation:', error)
       });
   };
 
@@ -91,6 +104,9 @@ const handleFormSubmit = (e) => {
                                 }}
                         />
                     <button className='offer-submit-button'>Submit Donation</button>
+                        {!isFormValid && (
+                    <p className='missing-form-input-notif' >*One or more required fields is missing</p>
+                        )}
                 </form>
             </div>
         </div>

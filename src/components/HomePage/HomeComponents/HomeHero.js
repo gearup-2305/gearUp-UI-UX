@@ -1,4 +1,3 @@
-import './HomeHero.css'
 import Together from '../../../assets/together.png';
 import { Link } from 'react-router-dom';
 

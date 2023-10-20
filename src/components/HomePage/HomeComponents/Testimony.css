@@ -8,23 +8,11 @@
 
 
 .description-two-container {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    background-color: #F8D59D;;
-    padding-left: 5em;
-    padding-right: 5em;
-    margin-bottom: .2em; */
-
     display: flex;
     flex-direction: column;
     align-items: center;
     height: auto;
-    /* width: 75vw; */
     background-color: #F8D59D;
-    /* padding-left: 10em; */
-    /* padding-right: 10em; */
     margin-bottom: 0.2em;
 }
 
@@ -34,10 +22,6 @@
 }
 
 .description-two-container p {
-    /* font-family: 'montserrat';
-    line-height: 1.7em;
-    font-size: 1.4em; */
-
     font-family: 'montserrat';
     line-height: 1.7em;
     font-size: 1.4em;
@@ -52,14 +36,6 @@
 }
 
 .artist-container {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    width: 50%;
-    padding-bottom: 4em;
-    padding-left: 2em; */
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,31 +55,13 @@
 }
 
 .quote-container {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    width: 60%;
-    height: 100%;
-
-    /* padding: .8em; */
-
-    /* background-repeat: no-repeat;
-    background-position: -5% -7%;    
-    background-size: 100%; */ 
-    
     background-image: url("/src/assets/quote.png");
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 50vw;
-    /* height: 100%; */
-    /* padding: 0.8em; */
-    /* background-image: url(http://localhost:3000/static/media/quote.604552f….png); */
     background-repeat: no-repeat;
-    /* background-position: -5% -7%; */
     background-size: 60em;
     background-position: center;
 }
@@ -111,7 +69,6 @@
 .quote {
     width: 60%;
     padding: 0;
-    /* margin-right: 5em; */
     margin-bottom: 0;
     text-align: center;
     font-family: 'montserrat';
@@ -128,8 +85,6 @@
 }
 
 .quote-artist-text {
-    /* display: flex; */
-
     display: flex;
     flex-direction: column;
     align-items: center;

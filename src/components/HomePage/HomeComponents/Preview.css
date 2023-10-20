@@ -1,10 +1,39 @@
 .preview-container {
-    display: flex;
     margin-bottom: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preview-container-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
 .preview-heading {
     background-color: #F8D59D;
     text-align: center;
     box-shadow: 0px 11px 20px 8px  #0257799e;
+}
+
+.explore-more-button {
+    font-size: 1.2em;
+    font-family: 'montserrat';
+    color: white;
+    background: #025779;
+    border-radius: 25px;
+    border: none;
+    height: 3em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22em;
+}
+
+.center {
+    align-items: center;
 }

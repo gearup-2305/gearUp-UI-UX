@@ -1,6 +1,7 @@
 .hero-container {
     display: flex;
     margin-top: 7.5em;
+    width: 100%;
 }
 
 .hero-container h2 {
@@ -13,12 +14,12 @@
     height: 100%;
 }
 
-.hero-img {
+.hero-img-request-donation {
     height: 20em;
     width: auto;
 }
 
-.description-container {
+.request-donation-description-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,7 +31,7 @@
     margin-bottom: .2em;
 }
 
-.description-container h2 {
+.request-donation-description-container h2 {
     font-family: Antic Didone;
     color: black;
     line-height: 1.6em;
@@ -38,8 +39,18 @@
     text-align: center;
     margin-top: 0;
 }
+.request-donation-description-container h3 {
+    font-family: 'montserrat';
+    color: black;
+    line-height: 1.6em;
+    font-size: 1.7em;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1em;
 
-.description-container p {
+}
+
+.request-donation-description-container p {
     font-family: 'montserrat';
     line-height: 1.6em;
     font-size: 1.2em;
@@ -112,5 +123,5 @@
     height: 2em;
     width: 17em;
     margin-top: 4em;
+    cursor: pointer;
 }
-

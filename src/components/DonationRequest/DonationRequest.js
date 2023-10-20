@@ -10,15 +10,21 @@ const DonationRequest = () => {
     const [details, setDetails] = useState('')
     const [imageUrl, setImageUrl] = useState('www.image.url')
     const [requestedAmount, setRequestedAmount] = useState(0)
-    // const [artistID, setArtistID] = useState(4)
-    // const [currentAmount, setCurrentAmount] = useState(0)
     const navigate = useNavigate()
+    const [isFormValid, setIsFormValid] = useState(true)
   
 
     const [createDonationRequest] = useMutation(SUBMIT_DONATION_REQUEST)
 
     const handleFormSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
+
+        if (!title || !details || !requestedAmount) {
+             setIsFormValid(false)
+             return
+        } else {
+            setIsFormValid(true)
+        }
 
         createDonationRequest({
             variables: {
@@ -38,36 +44,16 @@ const DonationRequest = () => {
         });
     }
 
-
-// Setting up functionality to check if form is valid
-
-    // useEffect(() => {
-    //     if (!title, !description, !amountRequested) {
-    //         setIsFormValid(true)
-    //     } else {
-    //         setIsFormValid(false)
-    //     }
-    // }, [title, description, amountRequested])
-
-
-// Clear form inputs
-
-    // function clearInput () {
-    //     setTitle('')
-    //     setAmountRequested(0)
-    //     setDescription('')
-    //     setImage('')
-    // }
-
   return (
 <>
         <div className='hero-container'>
-            <div className='description-container'>
-                <h2 className='heading'>Start Gearing Up</h2>
-                <p className='description'>Get What You Need For Your Art. Connect with a thriving community of donors eager to fund your art projects.</p>
+            <div className='request-donation-description-container'>
+                <h2>Start Gearing Up</h2>
+                <h3>Get What You Need For Your Art.</h3>
+                <p>Connect with a thriving community of donors eager to fund your art projects.</p>
             </div>
             <div className='image-container'>
-                <img className='hero-img' src={hero} alt=''/>
+                <img className='hero-img-request-donation' src={hero} alt=''/>
             </div>
         </div>
         <div className='request-form-container'>
@@ -127,6 +113,9 @@ const DonationRequest = () => {
                     </div>
                 </div>
             <button className='project-submit-button' onClick={(e) => handleFormSubmit(e)} >Submit Donation Request</button>
+                {!isFormValid && (
+                    <p className='missing-form-input-notif'>*One or more required fields are missing</p>
+                )}
             </form>
         </div>
 </>

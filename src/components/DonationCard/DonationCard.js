@@ -18,7 +18,7 @@ const DonationCard = ({ user }) => {
             <p>City: {user.city}</p>
         </div>
         <div className="donate-button-container">
-          <Link className='donation-offer' to={`/donation-offer`}>Donate</Link>
+          <Link className='donation-offer' to={`/${post.id}`} state={{post}}>Donate</Link>
         </div>
         </div>
       </div>

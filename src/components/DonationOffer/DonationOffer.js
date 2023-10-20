@@ -2,31 +2,46 @@ import './DonationOffer.css'
 import grows from '../../assets/artGrow.png'
 
 import paintPalleteBlack from '../../assets/paint-black.png'
-import { useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/client'
 import { useState } from 'react'
-import { SUBMIT_DONATION_OFFER } from '../../GraphQL/Mutations';
+import { SUBMIT_DONATION_OFFER } from '../../GraphQL/Mutations'
+import { useLocation, useParams } from 'react-router'
+import { useNavigate } from 'react-router-dom'
 
 const DonationOffer = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [amount, setAmount] = useState('')    
     const [createDonation] = useMutation(SUBMIT_DONATION_OFFER)
+    const { id } = useParams()
+    const navigate = useNavigate()
+    const [isFormValid, setIsFormValid] = useState(true)
+    const location = useLocation()
+    const post = location.state?.post
 
 const handleFormSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
+
+    if (!name || !email || !amount) {
+        setIsFormValid(false)
+        return
+    } else {
+       setIsFormValid(true)
+    }
     
     createDonation({
         variables: {
           name: name,
           email: email,
-          postId: parseFloat(1),
+          postId: parseFloat(id),
           amount: parseFloat(amount)
         }
       }).then((response) => {
-        console.log('Donation created:', response);
+        console.log('Donation created:', response)
+        navigate('/community-board')
       })
       .catch((error) => {
-        console.error('Error creating donation:', error);
+        console.error('Error creating donation:', error)
       });
   };
 
@@ -45,10 +60,10 @@ const handleFormSubmit = (e) => {
             <div className='request-review-container'>
                 <h2>Review the Request:</h2>
                 <div className='single-project-review'>
-                    <h3>🎨 Project: Title</h3>
-                    <p>Details: Details</p>
-                    <p>Requested Amount: $$$</p>
-                    <p>Amount Raised: $$$</p>
+                    <h3>🎨 Project: {post.title}</h3>
+                    <p>Details: {post.details}</p>
+                    <p>Requested Amount: ${post.requestedAmount}</p>
+                    <p>Amount Raised: ${post.currentAmount}</p>
                 </div> 
                 <div className='image-placeholder'>
                     <img className='hero-img' src={grows} alt=''/>
@@ -91,6 +106,9 @@ const handleFormSubmit = (e) => {
                                 }}
                         />
                     <button className='offer-submit-button'>Submit Donation</button>
+                        {!isFormValid && (
+                    <p className='missing-form-input-notif' >*One or more required fields are missing</p>
+                        )}
                 </form>
             </div>
         </div>

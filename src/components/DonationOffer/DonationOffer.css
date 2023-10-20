@@ -23,7 +23,8 @@
     font-family: 'montserrat';
     padding: 15px;
     padding-left: 30px;
-
+    font-size: 1.4em;
+    line-height: 1.5em;
 }
 
 .hero-image-container{
@@ -111,4 +112,5 @@
     height: 2em;
     width: 17em;
     margin-top: 2em;
+    cursor: pointer;
 }

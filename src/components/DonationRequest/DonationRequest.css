@@ -85,11 +85,43 @@
     margin-top: 3em;
 }
 
-.request-form-input,
 .project-form-label {
     font-family: 'montserrat';
     font-size: 1.3em;
-    width: 15em;
+    width: 25em;
+
+}
+
+.title {
+    font-family: 'montserrat';
+    font-size: 1.3em;
+    width: 25em;
+    margin-left: 1em;
+}
+
+.money {
+    font-family: 'montserrat';
+    font-size: 1.3em;
+    width: 10em;
+    margin-left: 1em;
+
+}
+
+.details {
+    font-family: 'montserrat';
+    font-size: 1.3em;
+    width: 25em;
+    height: 5em;
+    line-height: 5rem;
+    margin-left: 1em;
+    overflow-wrap: break-word;
+
+}
+
+input[type=text] {
+    word-wrap: break-word;
+    word-break: break-all;
+    /* height: 80px; */
 }
 
 .project-form-label {
@@ -105,12 +137,19 @@
     width: 100%;
 }
 
-.project-details-one-container,
-.project-details-two-container {
+.project-details-one-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 1em;
+    width: 50%;
+}
 
+.project-details-two-container  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 4em;
     width: 50%;
 }
 
@@ -123,6 +162,13 @@
     border: none;
     height: 2em;
     width: 17em;
-    margin-top: 4em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     cursor: pointer;
+}
+
+.old-painter {
+    margin-bottom: 0;
+    margin-left: 10em;
+    width: 20em;
 }

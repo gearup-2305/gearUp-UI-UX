@@ -1,3 +1,34 @@
+.community-board {
+    display: flex;
+    width: 100%;
+    
+}
+
+.community-board-heading-container{
+    display: flex;
+    background-color: #F8D59D;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .all-donation-requests-container {
-    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7.5em;
+    width: 75%;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
+
+.test {
+    margin-top: 7.5em;
+    color: black;
 }

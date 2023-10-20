@@ -26,9 +26,10 @@
 .description-container p {
     font-family: 'montserrat';
     line-height: 1.6em;
-    font-size: 1.2em;
+    font-size: 1.7em;
     text-align: center;
     margin-top: 0;
+    width: 32em;
 }
 
 .description-heading {

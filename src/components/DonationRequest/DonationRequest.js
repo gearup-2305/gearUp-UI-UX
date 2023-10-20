@@ -113,7 +113,7 @@ const DonationRequest = () => {
                 </div>
             <button className='project-submit-button' onClick={(e) => handleFormSubmit(e)} >Submit Donation Request</button>
                 {!isFormValid && (
-                    <p className='missing-form-input-notif'>*One or more required fields is missing</p>
+                    <p className='missing-form-input-notif'>*One or more required fields are missing</p>
                 )}
             </form>
         </div>

@@ -107,7 +107,7 @@ const handleFormSubmit = (e) => {
                         />
                     <button className='offer-submit-button'>Submit Donation</button>
                         {!isFormValid && (
-                    <p className='missing-form-input-notif' >*One or more required fields is missing</p>
+                    <p className='missing-form-input-notif' >*One or more required fields are missing</p>
                         )}
                 </form>
             </div>

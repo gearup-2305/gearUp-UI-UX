@@ -24,9 +24,10 @@
 .description-two-container p {
     font-family: 'montserrat';
     line-height: 1.7em;
-    font-size: 1.4em;
+    font-size: 1.7em;
     padding-right: 10em;
     padding-left: 10em;
+    width: 52em;
 }
 
 .testimonial-artist-container{
@@ -43,6 +44,7 @@
     width: 50vw;
     margin-right: -20em;
     margin-left: 13em;
+    padding-bottom: 6em;
 }
 
 .artist-heading{
@@ -65,7 +67,7 @@
     background-size: 60em;
     background-position: center;
     background-color: rgb(255 255 255 / 39%);
-    padding-top: 5em;
+    padding-top: 10em;
 }
 
 .quote {
@@ -91,4 +93,5 @@
     flex-direction: column;
     align-items: center;
     width: 30vw;
+    padding-bottom: 5em;
 }

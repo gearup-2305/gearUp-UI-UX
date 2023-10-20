@@ -25,8 +25,12 @@ const CommunityBoard = () => {
       return <Error error={error}/>
     }
 
-      const allDonationRequests = data && donations?.artists?.map( user => {
-        console.log(user)
+    const artistsWithFilteredPosts = data?.artists?.map(artists => ({
+      ...artists,
+      posts: artists.posts.filter(post => post.requestedAmount > post.currentAmount)
+    }))
+
+      const allDonationRequests = artistsWithFilteredPosts?.map( user => {
         return (<DonationCard key={user.id} user={user} />)
       })
 

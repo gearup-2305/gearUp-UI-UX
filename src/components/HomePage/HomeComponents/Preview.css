@@ -1,0 +1,10 @@
+.preview-container {
+    display: flex;
+    margin-bottom: 5em;
+}
+
+.preview-heading {
+    background-color: #F8D59D;
+    text-align: center;
+    box-shadow: 0px 11px 20px 8px  #0257799e;
+}

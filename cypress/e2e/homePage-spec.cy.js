@@ -32,7 +32,7 @@ describe('Test Home Page', () => {
     it('Should contain hero image with GearUp description', () => {
       cy.url().should('eq', 'http://localhost:3000/')
       cy.get('.home-container')
-      cy.get('.description-container')
+      cy.get('.request-donation-description-container')
       cy.get('h2')
         .should('contain', 'Start Gearing Up')
       cy.get('h3')

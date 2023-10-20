@@ -47,12 +47,13 @@ const DonationRequest = () => {
   return (
 <>
         <div className='hero-container'>
-            <div className='description-container'>
-                <h2 className='heading'>Start Gearing Up</h2>
-                <p className='description'>Get What You Need For Your Art. Connect with a thriving community of donors eager to fund your art projects.</p>
+            <div className='request-donation-description-container'>
+                <h2>Start Gearing Up</h2>
+                <h3>Get What You Need For Your Art.</h3>
+                <p>Connect with a thriving community of donors eager to fund your art projects.</p>
             </div>
             <div className='image-container'>
-                <img className='hero-img' src={hero} alt=''/>
+                <img className='hero-img-request-donation' src={hero} alt=''/>
             </div>
         </div>
         <div className='request-form-container'>

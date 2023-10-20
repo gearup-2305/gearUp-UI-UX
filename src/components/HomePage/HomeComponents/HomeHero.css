@@ -1,0 +1,91 @@
+.home-container {
+    display: flex;
+    margin-top: 7.5em;
+}
+
+.image-container {
+    width: 50%;
+    height: 100%;
+}
+
+.together-img {
+    height: 30em;
+    width: 50vw;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    background-color: #E1EFF4;
+    padding: .8em;
+    margin-bottom: .2em;
+}
+
+.description-container p {
+    font-family: 'montserrat';
+    line-height: 1.6em;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 0;
+}
+
+.description-heading {
+    font-size: 3em;
+    font-family: Antic Didone;
+    color: black;
+}
+
+.login-link {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-family: 'montserrat';
+    font-size: 1.2em;
+    color: white;
+    background: #025779;
+    border-radius: 25px;
+    border: none;
+    height: 2em;
+    width: 13em;
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+
+.gear-up-link{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-family: 'montserrat';
+    font-size: 1.2em;
+    color: black;
+    background: #F8D59D;
+    border-radius: 25px;
+    border: none;
+    height: 2em;
+    width: 13em;
+    cursor: pointer;
+}
+
+
+.login-container {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../assets/paint.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 29em;
+    height: 70%;
+    width: 100%;
+}
+
+.login-home-heading {
+    font-family: Antic Didone;
+    color: white !important;
+    background: black;
+    font-size: 1.4em !important;
+    margin-top: 1em !important;
+}

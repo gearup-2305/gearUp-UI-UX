@@ -23,9 +23,9 @@ const handleFormSubmit = (e) => {
     if (!name || !email || !amount) {
         setIsFormValid(false)
         return
-   } else {
+    } else {
        setIsFormValid(true)
-   }
+    }
     
     createDonation({
         variables: {

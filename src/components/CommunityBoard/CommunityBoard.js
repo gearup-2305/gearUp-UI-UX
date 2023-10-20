@@ -1,50 +1,49 @@
 import './CommunityBoard.css'
 import { useQuery } from '@apollo/client'
+import { LOAD_ALL_POSTS } from '../../GraphQL/Queries'
 import { useState, useEffect } from 'react'
-import { LOAD_ARTISTS } from '../../GraphQL/Queries'
 import DonationCard from '../DonationCard/DonationCard'
-import Loading from '../Loading/Loading'
+import Loading from '../Loading/Loading';
 import Error from '../Error/Error'
 import FilterForm from '../FilterForm/FilterForm'
 
 const CommunityBoard = () => {
-  const { loading, error, data, refetch } = useQuery(LOAD_ARTISTS)
-  const [artists, setArtists] = useState([])
+  const { loading, error, data, refetch} = useQuery(LOAD_ALL_POSTS)
+  const [allPosts, setAllPosts] = useState([])
   const [filters, setFilter] = useState(false)
   const [noDonations, setNoDonations] = useState(false)
   const [firstProjects, setFirstProjects] = useState(false)
 
   useEffect(() => {
     refetch()
+    if (error) {
+      console.error('Error fetching data:', error);
+      return <p>Error: {error.message}</p>;
+    }
     if (!loading && data) {
-      setArtists(data.artists)
+      const posts = data.posts
+      setAllPosts(posts)
+      console.log(allPosts)
     }
   }, [loading, error, data, refetch])
 
-  if (loading) return <Loading />
-
+  if (loading) return <Loading/>
+  
   if (error) {
     console.error('Error fetching data:', error)
-    return <Error error={error} />
+    return <Error error={error}/>
   }
 
   const filteredNoDonations = noDonations
-    ? artists?.filter(user => user?.posts?.some(post => post.currentAmount == 0))
-    : artists
-
-  const filteredFirstDonation = firstProjects
-    ? artists?.filter(user => user.posts.length === 1)
-    : artists
+  ? allPosts?.filter(post => post.currentAmount == 0)
+  : allPosts
 
   const donationRequestsToRender = noDonations
-    ? filteredNoDonations?.map(user => (
-        <DonationCard key={user.id} user={user} />
+    ? filteredNoDonations?.map(request => (
+        <DonationCard key={request.id} request={request} />
       ))
-    : firstProjects
-    ? filteredFirstDonation?.map(user => (
-        <DonationCard key={user.id} user={user} />
-      ))
-    : data && artists.map(user => <DonationCard key={user.id} user={user} />)
+    : allPosts?.map( request => {
+      return (<DonationCard key={request.id} request={request} />) })
 
   return (
     <div className='community-board'>

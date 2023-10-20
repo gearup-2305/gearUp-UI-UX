@@ -54,3 +54,16 @@ export const LOAD_SINGLE_USER = gql`
   }
 }
 `
+export const LOAD_ALL_POSTS = gql`
+  query GetPosts {
+    posts(orderBy: DESC) {
+      artistId
+      id
+      title
+      details
+      requestedAmount
+      currentAmount
+      donationPercentage
+    }
+  }
+`

@@ -118,12 +118,6 @@
 
 }
 
-input[type=text] {
-    word-wrap: break-word;
-    word-break: break-all;
-    /* height: 80px; */
-}
-
 .project-form-label {
     margin-top: 2em;
 }

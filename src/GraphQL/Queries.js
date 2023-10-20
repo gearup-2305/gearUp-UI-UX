@@ -56,12 +56,15 @@ export const LOAD_SINGLE_USER = gql`
 `
 
 export const LOAD_PREVIEW_CONTENT = gql`
-  query posts(orderBy: DESC) {
-    id
-    title
-    details
-    requestedAmount
-    currentAmount
-    donationPercentage
+  query GetPosts {
+    posts(orderBy: DESC) {
+      id
+      title
+      details
+      requestedAmount
+      currentAmount
+      donationPercentage
+    }
   }
 `
+

@@ -54,10 +54,10 @@ export const LOAD_SINGLE_USER = gql`
   }
 }
 `
-
-export const LOAD_PREVIEW_CONTENT = gql`
-  query Posts {
+export const LOAD_ALL_POSTS = gql`
+  query GetPosts {
     posts(orderBy: DESC) {
+      artistId
       id
       title
       details
@@ -67,4 +67,3 @@ export const LOAD_PREVIEW_CONTENT = gql`
     }
   }
 `
-

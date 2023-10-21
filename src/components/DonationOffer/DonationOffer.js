@@ -17,7 +17,7 @@ const DonationOffer = () => {
     const navigate = useNavigate()
     const [isFormValid, setIsFormValid] = useState(true)
     const location = useLocation()
-    const post = location.state?.post
+    const post = location.state?.request
 
 const handleFormSubmit = (e) => {
     e.preventDefault()

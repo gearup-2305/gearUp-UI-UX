@@ -30,7 +30,7 @@ const DonationRequest = () => {
             variables: {
                 title: title,
                 details: details,
-                imageUrl: imageUrl,
+                imageUrl: 'none',
                 requestedAmount: parseFloat(requestedAmount), 
                 currentAmount: parseFloat(0),     
                 artistID: parseInt(4),

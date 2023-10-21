@@ -1,7 +1,7 @@
 import './FilterForm.css'
 import { useState } from 'react'
 
-const FilterForm = ({ setNoDonations, setFirstProjects }) => {
+const FilterForm = ({ setNoDonations, setFirstProjects, setNoneFound }) => {
   const [noDonationsForm, setNoDonationsForm] = useState(false)
   const [firstProjectsForm, setFirstProjectsForm] = useState(false)
 
@@ -18,6 +18,7 @@ const FilterForm = ({ setNoDonations, setFirstProjects }) => {
     setFirstProjectsForm(false)
     setNoDonations(false) 
     setFirstProjects(false)
+    setNoneFound(false)
   }
 
   return (

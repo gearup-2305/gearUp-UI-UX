@@ -7,9 +7,10 @@ import { useState, useEffect } from 'react'
 import Loading from '../Loading/Loading';
 import Error from '../Error/Error'
 
-const DonationCard = ({ request }) => {
+const DonationCard = ({ request, firstProjects, setNoneFound }) => {
   const { loading, error, data, refetch} = useQuery(LOAD_ARTISTS)
-  const [allArtists, setAllArtists] = useState([])
+  const [filteredArtists, setFilteredArtists] = useState([])
+  const [postsArtist, setPostsArtist] = useState(null)
 
   useEffect(() => {
     refetch()
@@ -19,10 +20,20 @@ const DonationCard = ({ request }) => {
     }
     if (!loading && data) {
       const artists = data.artists
-      setAllArtists(artists)
-      console.log(allArtists)
+
+      
+      if (firstProjects) {
+        const filtered = artists.filter(artist => artist.posts.length === 1)
+        setFilteredArtists(filtered.find(artist => parseInt(artist.id) === request.artistId))
+        console.log(filteredArtists)
+      } if (firstProjects && filteredArtists.length == 0) {
+        setNoneFound(true)
+      } else {
+        setPostsArtist(filteredArtists)
+        setPostsArtist(artists.find(artist => parseInt(artist.id) === request.artistId))
+      }
     }
-  }, [loading, error, data, refetch])
+  }, [loading, error, data, refetch, firstProjects, request.artistId])
 
   if (loading) return <Loading/>
   
@@ -31,44 +42,39 @@ const DonationCard = ({ request }) => {
     return <Error error={error}/>
   }
 
-  const postsArtist = data?.artists.find(artist => {
-    console.log(artist.id)
-    console.log(request.artistId)
-    return parseInt(artist.id) === request.artistId
-  
-  })
-  
-  return (
-  <div className='card-container'>
-       <div key={request.id} className='donation-card'>
-      <div className='profile-button-container'>
-        <div className='profile-container'>
-          <img
-            className='profile-image-card'
-            src={postsArtist.profileImage === 'image.jpg' ? thumbprint : postsArtist.profileImage}
-            alt=''
-          />
-          <div className='personal-details-container'>
-            <h3>{postsArtist.name}</h3>
-            <p>City: {postsArtist.city}</p>
-        </div>
-        <div className="donate-button-container">
-          <Link className='donation-offer' to={`/${request.id}`} state={{request}}>Donate</Link>
-        </div>
-        </div>
-      </div>
-      <div className='project-details-card'>
-        <div className='single-project-card'>
-          <h3>🎨 Project: {request.title}</h3>
-          <p>Details: {request.details}</p>
-          <div className="donation-amounts">
-            <p>Requested Amount: ${request.requestedAmount}</p>
-            <p>Amount Raised: ${request.currentAmount}</p>
+  return postsArtist === undefined ? null (
+    ) : postsArtist && request && (
+
+      <div className='card-container'>
+          <div key={request.id} className='donation-card'>
+          <div className='profile-button-container'>
+            <div className='profile-container'>
+              <img
+                className='profile-image-card'
+                src={postsArtist.profileImage === 'image.jpg' ? thumbprint : postsArtist.profileImage}
+                alt=''
+              />
+              <div className='personal-details-container'>
+                <h3>{postsArtist.name}</h3>
+                <p>City: {postsArtist.city}</p>
+            </div>
+            <div className="donate-button-container">
+              <Link className='donation-offer' to={`/${request.id}`} state={{request}}>Donate</Link>
+            </div>
+            </div>
           </div>
-        </div> 
-      </div>
-    </div>
-  </div> 
+          <div className='project-details-card'>
+            <div className='single-project-card'>
+              <h3>🎨 Project: {request.title}</h3>
+              <p>Details: {request.details}</p>
+              <div className="donation-amounts">
+                <p>Requested Amount: ${request.requestedAmount}</p>
+                <p>Amount Raised: ${request.currentAmount}</p>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div> 
     )
   }  
 

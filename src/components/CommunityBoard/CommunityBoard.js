@@ -13,7 +13,8 @@ const CommunityBoard = () => {
   const [filters, setFilter] = useState(false)
   const [noDonations, setNoDonations] = useState(false)
   const [firstProjects, setFirstProjects] = useState(false)
- 
+  const [noneFound, setNoneFound] = useState(false)
+
   useEffect(() => {
     refetch()
     if (error) {
@@ -40,10 +41,12 @@ const CommunityBoard = () => {
 
   const donationRequestsToRender = noDonations
     ? filteredNoDonations?.map(request => (
-        <DonationCard key={request.id} request={request} />
+        <DonationCard key={request.id} request={request} firstProjects={firstProjects} setNoneFound={setNoneFound}/>
       ))
     : allPosts?.map( request => {
-      return (<DonationCard key={request.id} request={request} />) })
+      return (<DonationCard key={request.id} request={request} firstProjects={firstProjects} setNoneFound={setNoneFound}/>) })
+console.log(noneFound)
+
 
   return (
     <div className='community-board'>
@@ -52,17 +55,20 @@ const CommunityBoard = () => {
         setNoDonations={setNoDonations}
         firstProjects={firstProjects}
         setFirstProjects={setFirstProjects}
+        setNoneFound={setNoneFound}
       />
       <div className='all-donation-requests-container'>
         <div className='community-board-heading-container'>
           <h2>Find a Project to Support</h2>
         </div>
-        {donationRequestsToRender}
+        {noneFound ? (
+        <div className='none-found'>No projects found. Please clear filters.</div>
+      ) : (
+        donationRequestsToRender
+      )}
       </div>
     </div>
   )
 }
 
 export default CommunityBoard
-
-

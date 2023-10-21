@@ -28,8 +28,11 @@
     width: 75%;
 }
 
-
-/* .test {
-    margin-top: 7.5em;
-    color: black;
-} */
+.none-found {
+    display: flex;
+    margin-top: 2em;
+    font-family: 'montserrat';
+    padding: 15px;
+    padding-left: 30px;
+    font-size: 1.4em;
+}

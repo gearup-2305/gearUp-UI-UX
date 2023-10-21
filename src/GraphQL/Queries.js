@@ -58,6 +58,19 @@ export const LOAD_ALL_POSTS = gql`
   query GetPosts {
     posts(orderBy: DESC) {
       artistId
+       id
+      title
+      details
+      requestedAmount
+      currentAmount
+      donationPercentage
+    }
+  }
+`
+
+export const LOAD_PREVIEW_CONTENT = gql`
+  query Posts {
+    posts(orderBy: DESC) {
       id
       title
       details
@@ -67,3 +80,5 @@ export const LOAD_ALL_POSTS = gql`
     }
   }
 `
+`
+

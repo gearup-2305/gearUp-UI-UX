@@ -54,3 +54,17 @@ export const LOAD_SINGLE_USER = gql`
   }
 }
 `
+
+export const LOAD_PREVIEW_CONTENT = gql`
+  query Posts {
+    posts(orderBy: DESC) {
+      id
+      title
+      details
+      requestedAmount
+      currentAmount
+      donationPercentage
+    }
+  }
+`
+

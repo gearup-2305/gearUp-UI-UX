@@ -9,7 +9,6 @@ import { useNavigate } from 'react-router-dom'
 const DonationRequest = () => {
     const [title, setTitle] = useState('')
     const [details, setDetails] = useState('')
-    const [imageUrl, setImageUrl] = useState('www.image.url')
     const [requestedAmount, setRequestedAmount] = useState(0)
     const navigate = useNavigate()
     const [isFormValid, setIsFormValid] = useState(true)
@@ -99,7 +98,7 @@ const DonationRequest = () => {
                                     setRequestedAmount(numericValue)
                             }}
                             />
-                            <img className='old-painter' src={oldPainter}/>         
+                            <img className='old-painter' src={oldPainter} alt=''/>         
                     </div>
                 </div>
             <button className='project-submit-button' onClick={(e) => handleFormSubmit(e)} >Submit Donation Request</button>

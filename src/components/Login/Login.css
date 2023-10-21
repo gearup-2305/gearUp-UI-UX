@@ -20,6 +20,8 @@ h2 {
     padding: 2em;
     border-radius: 1em;
     gap: 1em;
+    height: 10%;
+    width: 20%;
 }
 
 .login-form-label {

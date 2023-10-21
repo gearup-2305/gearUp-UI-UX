@@ -39,15 +39,13 @@ const CommunityBoard = () => {
   ? allPosts?.filter(post => post.currentAmount == 0)
   : allPosts
 
-  const donationRequestsToRender = noDonations
-    ? filteredNoDonations?.map(request => (
+  const donationRequestsToRender = noDonations && filteredNoDonations.length > 0
+    ? (filteredNoDonations?.map(request => (
         <DonationCard key={request.id} request={request} firstProjects={firstProjects} setNoneFound={setNoneFound}/>
       ))
-    : allPosts?.map( request => {
+   ) : allPosts?.map( request => {
       return (<DonationCard key={request.id} request={request} firstProjects={firstProjects} setNoneFound={setNoneFound}/>) })
-console.log(noneFound)
-
-
+    
   return (
     <div className='community-board'>
       <FilterForm

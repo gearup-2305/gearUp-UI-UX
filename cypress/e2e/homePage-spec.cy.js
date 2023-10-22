@@ -73,22 +73,23 @@ describe('Test Home Page', () => {
     cy.get('.preview-container-cards').children().should('have.length', 3)
 
     cy.get('.preview-container-cards > :nth-child(1)')
-    cy.get('h2').should('contain', 'Title: Project Title Sample')
-    cy.get('p').should('contain', 'Details: Project Description Sample')
-    cy.get('p').should('contain', 'Requested Amount: $100')
-    cy.get('p').should('contain', 'Current Amount: $0')
+    cy.get('h2').should('contain', 'Title: Post 1')
+    cy.get('p').should('contain', 'Details: Details for Post 1')
+    cy.get('p').should('contain', 'Requested Amount: $1000')
+    cy.get('p').should('contain', 'Current Amount: $750')
 
     cy.get('.preview-container-cards > :nth-child(3)')
-    cy.get('h2').should('contain', 'Title: Project Title Sample')
-    cy.get('p').should('contain', 'Details: Project Description Sample')
-    cy.get('p').should('contain', 'Requested Amount: $100')
-    cy.get('p').should('contain', 'Current Amount: $0')
+    cy.get('h2').should('contain', 'Title: Post 3')
+    cy.get('p').should('contain', 'Details: Details for Post 3')
+    cy.get('p').should('contain', 'Requested Amount: $1200')
+    cy.get('p').should('contain', 'Current Amount: $1200')
+
   })
 
   it('Should take user to offer donation page click recent project donate button', () => {
     cy.get('.preview-container-cards > :nth-child(3)')
     cy.get(':nth-child(3) > .donation-offer').click()
-    cy.url().should('eq', 'http://localhost:3000/51')
+    cy.url().should('eq', 'http://localhost:3000/3')
   })
 
   it('Should take user to offer donation page click recent project donate button', () => {

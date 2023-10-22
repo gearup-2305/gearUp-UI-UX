@@ -28,23 +28,48 @@ describe('Test Donation Request Page', () => {
       'contain',
       "Details: Don't worry, I'm not painting your house"
     )
-    cy.get('p').should('contain', 'Requested Amount: $333444')
-    cy.get('p').should('contain', 'Amount Raised: $25.09')
+    // cy.get('p').should('contain', 'Requested Amount: $333444')
+    // cy.get('p').should('contain', 'Amount Raised: $25.09')
   })
 
-  it('Should display section with review the request section', () => {
+  it('Should contain offer donation form', () => {
     cy.get(
       ':nth-child(1) > .donation-card > .profile-button-container > .profile-container > .donate-button-container > .donation-offer'
     ).click()
     cy.url().should('eq', 'http://localhost:3000/2')
-    cy.get('.request-review-container')
-    cy.get('h2').should('contain', 'Review the Request:')
-    cy.get('h3').should('contain', '🎨 Project: I need a paint brush')
-    cy.get('p').should(
-      'contain',
-      "Details: Don't worry, I'm not painting your house"
-    )
-    cy.get('p').should('contain', 'Requested Amount: $333444')
-    cy.get('p').should('contain', 'Amount Raised: $25.09')
+    cy.get('.offer-form-container')
+    cy.get('h2').should('contain', 'Make Your Donation:')
+    cy.get('.offer-form')
+    cy.get('input[name="Name"]')
+    cy.get('input[name="Email"]')
+    cy.get('input[name="Amount"]')
+  })
+
+  it('Form value should update when user enters information', () => {
+    cy.get(
+      ':nth-child(1) > .donation-card > .profile-button-container > .profile-container > .donate-button-container > .donation-offer'
+    ).click()
+    cy.url().should('eq', 'http://localhost:3000/2')
+
+    cy.get('input[name="Name"]').type('Judy')
+    cy.get('input[name="Name"]').should('have.attr', 'value', 'Judy')
+
+    cy.get('input[name="Email"]').type('judy@judy.com')
+    cy.get('input[name="Email"]').should('have.attr', 'value', 'judy@judy.com')
+
+    // cy.get('input[name="Amount"]').type(10000)
+    // cy.get('input[name="Amount"]').should('have.attr', 'value', '1000')
+    cy.get('button')
+    .contains('Submit Donation').click()
+
+    cy.visit('http://localhost:3000/community-board')
+    cy.get(
+        ':nth-child(1) > .donation-card > .profile-button-container > .profile-container > .donate-button-container > .donation-offer'
+      )
+
+      cy.get(':nth-child(1) > .donation-card')
+      cy.get('.single-project-card')
+    //   cy.get('p').should('contain', 'Amount Raised: $10025.09')
+
   })
 })

@@ -97,7 +97,7 @@ const handleFormSubmit = (e) => {
                         <label className='offer-form-label'  htmlFor='Amount'>Amount:</label>
                         <input
                             className="offer-form-input"
-                            type="number"
+                            type="money"
                             placeholder="Amount"
                             name="Amount"
                             value={amount}

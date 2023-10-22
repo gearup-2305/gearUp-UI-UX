@@ -1,7 +1,10 @@
-describe('Test Donation Request Page', () => {
+describe('Test Donation Offer Page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/community-board')
-  })
+    cy.interceptQuery('queryArtist.json', 'artist', 'login')
+    cy.visit('http://localhost:3000/login-form')
+    cy.get('.login-link').click().wait('@login')
+    cy.get('[href="/community-board"]').click()
+  });
 
   it('Should display hero image with description', () => {
     cy.get(

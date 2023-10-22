@@ -34,6 +34,10 @@
     width: 22em;
 }
 
+.explore-more-button:hover {
+    transform: scale(1.1);
+}
+
 .center {
     align-items: center;
 }

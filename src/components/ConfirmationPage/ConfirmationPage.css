@@ -1,30 +1,23 @@
-.error-message {
-    font-size: 2em;
-}
-
-.error-container {
+.confirmation-container {
     display: flex;
-    width: 100vw;
-    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #0257797b;
+    margin-top: 7.5em;
 }
 
-.center-link {
-    display: flex; 
-    align-items: center;
+.confirmation-button {
+    display: flex;
     justify-content: center;
+    align-items: center;
     font-family: 'montserrat';
-    font-size: 1em;
+    font-size: 1.2em;
     color: white;
     background: #025779;
     border-radius: 25px;
     border: none;
     height: 2em;
-    width: 9em;
-    margin-bottom: 2em;
+    width: 17em;
+    margin-top: 2em;
     cursor: pointer;
-    text-decoration: none;
 }

@@ -8,6 +8,9 @@ import { SUBMIT_DONATION_OFFER } from '../../GraphQL/Mutations'
 import { useLocation, useParams } from 'react-router'
 import { useNavigate } from 'react-router-dom'
 
+import { Link } from 'react-router-dom'
+
+
 const DonationOffer = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -105,7 +108,7 @@ const handleFormSubmit = (e) => {
                             setAmount(e.target.value)
                                 }}
                         />
-                    <button className='offer-submit-button'>Submit Donation</button>
+                         <Link className="confirmation-button" to={`/donation-confirmation`}>Submit Your Donation</Link>
                         {!isFormValid && (
                     <p className='missing-form-input-notif' >*One or more required fields are missing</p>
                         )}

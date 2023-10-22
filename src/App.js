@@ -6,6 +6,7 @@ import DonationOffer from './components/DonationOffer/DonationOffer';
 import Login from './components/Login/Login';
 import CommunityBoard from './components/CommunityBoard/CommunityBoard';
 import Profile from './components/Profile/Profile';
+import ConfirmationPage from './components/ConfirmationPage/ConfirmationPage'
 
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
@@ -24,6 +25,7 @@ function App() {
           <Route path='community-board' element={<CommunityBoard/>}/>
           <Route path='profile' element={<Profile loginAccess={loginAccess} setLoginAccess={setLoginAccess} setProfileAccess={setProfileAccess}/>}/>
           <Route path="login-form" element={<Login setLoginAccess={setLoginAccess} loginAccess={loginAccess} setProfileAccess={setProfileAccess} />}/>
+          <Route path="donation-confirmation" element={<ConfirmationPage />}/>
           <Route path="/:id" element={<DonationOffer/>}/>
       </Routes>
    </>  

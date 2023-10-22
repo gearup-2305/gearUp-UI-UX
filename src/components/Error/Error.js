@@ -1,9 +1,14 @@
 import './Error.css'
+import { Link } from 'react-router-dom'
 
-const Error = ({error}) => {
+const Error = () => {
+
 
     return (
-        <p className='error-message' >Error: {error.message}</p>
+        <div className='error-container'>
+        <p className='error-message' >Oops! Something went wrong, please try again.</p>
+        <Link className='center-link' to={'/'}>Retry</Link>
+        </div>
     )
 }
 

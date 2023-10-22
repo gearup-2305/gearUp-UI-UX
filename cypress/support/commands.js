@@ -23,3 +23,16 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('interceptQuery', (fixtureName, opName, alias) => {
+    cy.fixture(fixtureName).then((fixture) => {
+
+        cy.intercept('POST', 'https://gearup-be-2305-079e2d2dfead.herokuapp.com/graphql', (req) => {
+          if (req.body.operationName === opName) {
+            req.reply({
+              data: fixture
+            });
+          }
+        }).as(alias)
+      });
+})

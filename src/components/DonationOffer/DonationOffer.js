@@ -18,6 +18,7 @@ const DonationOffer = () => {
     const [isFormValid, setIsFormValid] = useState(true)
     const location = useLocation()
     const post = location.state?.post
+    console.log(post)
 
 const handleFormSubmit = (e) => {
     e.preventDefault()
@@ -117,4 +118,3 @@ const handleFormSubmit = (e) => {
 }
 
 export default DonationOffer
-

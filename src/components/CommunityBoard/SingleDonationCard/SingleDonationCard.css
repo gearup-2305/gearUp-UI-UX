@@ -1,3 +1,9 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
 .donation-card {
     display: flex;
     flex-direction: column;
@@ -6,7 +12,7 @@
     margin: 2em;
     padding: 1em;
     border-radius: 1em;
-    width: 50%;
+    width: 100%;
 }
 
 .donation-card h2{

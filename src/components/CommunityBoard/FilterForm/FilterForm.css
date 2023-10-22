@@ -1,0 +1,56 @@
+.form-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7.5em;
+    background-color: #F8D59D;
+    width: 25%;
+    height: 100%;
+}
+
+.form-heading {
+    font-size: 1em;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1em;
+    border: solid black .5em;
+    align-items: center;
+    background-color: white;
+    width: 15em;
+    height: 15em;
+    margin-bottom: 2em;
+    /* margin-top: 2em; */
+}
+
+.input-label-wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+label {
+    font-family: 'montserrat';
+    margin: .5em;
+}
+
+button {
+    width: 8em;
+    font-family: 'montserrat';
+    margin-top: 1em;
+    padding: .5em;
+}
+.no-donations-section,
+.first-donations-section {
+    display: flex;
+    width: 100%;
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+}

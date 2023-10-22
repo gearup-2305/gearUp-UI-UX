@@ -1,10 +1,10 @@
 import './Preview.css'
 import { useQuery } from '@apollo/client'
-import { LOAD_PREVIEW_CONTENT } from '../../../GraphQL/Queries'
+import { LOAD_ALL_POSTS } from '../../../GraphQL/Queries'
 import { Link } from 'react-router-dom'
 
 const Preview = () => {
-    const { loading, error, data } = useQuery(LOAD_PREVIEW_CONTENT)
+    const { loading, error, data } = useQuery(LOAD_ALL_POSTS)
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error: {error.message}</p>
     const mostRecentPosts = data.posts.slice(0, 3)

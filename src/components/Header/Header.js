@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 
 const Header = ({ profileAccess }) => {
   const profileLoginToggle = profileAccess ? (
-    <div>
+    <div className='login-only-nav'>
       <NavLink to={`/donation-request`} className='nav-link'>Request a Donation</NavLink>
-      <NavLink to={'/profile'} className='nav-link'>🎨 Profile</NavLink>
+      <NavLink to={'/profile'} className='nav-link login-nav'>🎨 Profile</NavLink>
     </div>
   ) : (
     <NavLink to={'/login-form'} className='nav-link'>Login</NavLink>

@@ -53,3 +53,16 @@
     box-shadow: 0px 1px 20px 20px #0a415ad1;
     background: #0a415ad1;
 }
+
+
+.login-nav {
+    display: flex;
+    flex-direction: row;
+    margin-left: 4em;
+    margin-right: 1em;
+}
+
+.login-only-nav {
+    display: flex;
+    flex-direction: row;
+}

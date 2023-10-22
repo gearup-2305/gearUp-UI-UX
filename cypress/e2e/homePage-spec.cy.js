@@ -1,6 +1,18 @@
 describe('Test Home Page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+
+cy.fixture('queryPosts.json').then((fixture) => {
+
+  cy.intercept('POST', 'https://gearup-be-2305-079e2d2dfead.herokuapp.com/graphql', (req) => {
+    if (req.body.operationName === 'Posts') {
+      req.reply({
+        data: fixture
+      });
+    }
+  }).as('previewContent')
+});
+
+    cy.visit('http://localhost:3000/').wait('@previewContent')
   });
 
     it('should display header', () => {

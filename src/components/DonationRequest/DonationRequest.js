@@ -1,5 +1,6 @@
 import './DonationRequest.css'
 import hero from '../../assets/hero.png'
+import oldPainter from '../../assets/oldPainter.png'
 import { useState } from 'react'
 import { useMutation } from '@apollo/client'
 import { SUBMIT_DONATION_REQUEST } from '../../GraphQL/Mutations'
@@ -8,7 +9,6 @@ import { useNavigate } from 'react-router-dom'
 const DonationRequest = () => {
     const [title, setTitle] = useState('')
     const [details, setDetails] = useState('')
-    const [imageUrl, setImageUrl] = useState('www.image.url')
     const [requestedAmount, setRequestedAmount] = useState(0)
     const navigate = useNavigate()
     const [isFormValid, setIsFormValid] = useState(true)
@@ -30,7 +30,7 @@ const DonationRequest = () => {
             variables: {
                 title: title,
                 details: details,
-                imageUrl: imageUrl,
+                imageUrl: 'none',
                 requestedAmount: parseFloat(requestedAmount), 
                 currentAmount: parseFloat(0),     
                 artistID: parseInt(4),
@@ -63,7 +63,7 @@ const DonationRequest = () => {
                     <div className='project-details-one-container'>
                         <label className='project-form-label'  htmlFor='Project Title'>Project Title:</label>
                         <input
-                            className="request-form-input"
+                            className="request-form-input title"
                             type="text"
                             placeholder="Enter Project Title"
                             name="Project Title"
@@ -74,7 +74,7 @@ const DonationRequest = () => {
                         />
                         <label className='project-form-label'  htmlFor='Project Description'>Project Description:</label>
                         <input
-                            className="request-form-input"
+                            className="request-form-input details"
                             type="text"
                             placeholder="Enter Project Description"
                             name="Project Description"
@@ -85,20 +85,9 @@ const DonationRequest = () => {
                         />
                     </div>
                     <div className='project-details-two-container'>  
-                        <label className='project-form-label'  htmlFor='Project Image'>Project Image:</label>
-                            <input
-                                className="request-form-input"
-                                type="url"
-                                placeholder="Upload Project Image"
-                                name="Project Image"
-                                value={imageUrl}
-                                onChange={(e) => {
-                                setImageUrl(e.target.value)
-                            }}
-                            />
                             <label className='project-form-label'  htmlFor='Dollar Amount Requested'>Dollar Amount Requested:</label>
                             <input
-                                className="request-form-input"
+                                className="request-form-input money"
                                 type="money"
                                 placeholder="Dollar Amount Requested"
                                 name="Dollar Amount Requested"
@@ -109,7 +98,7 @@ const DonationRequest = () => {
                                     setRequestedAmount(numericValue)
                             }}
                             />
-                                   
+                            <img className='old-painter' src={oldPainter} alt=''/>         
                     </div>
                 </div>
             <button className='project-submit-button' onClick={(e) => handleFormSubmit(e)} >Submit Donation Request</button>

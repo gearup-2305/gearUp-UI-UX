@@ -37,7 +37,6 @@ describe('Test Home Page', () => {
      cy.get('.request-form')
      cy.get('input[name="Project Title"]')
      cy.get('input[name="Project Description"]')
-     cy.get('input[name="Project Image"]')
      cy.get('input[name="Dollar Amount Requested"]')
 
      cy.get('button')
@@ -55,9 +54,6 @@ describe('Test Home Page', () => {
       //description
       cy.get('input[name="Project Description"]').type('Project Description Sample')
       cy.get('input[name="Project Description"]').should('have.attr', 'value', 'Project Description Sample')
-      //image
-      cy.get('input[name="Project Image"]').type('projectImageSample.jpg')
-      cy.get('input[name="Project Image"]').should('have.attr', 'value', 'www.image.urlprojectImageSample.jpg')
       //amount requested
       cy.get('input[name="Dollar Amount Requested"]').type('{backspace}').type(100)
       cy.get('input[name="Dollar Amount Requested"]').should('have.attr', 'value', '$100')

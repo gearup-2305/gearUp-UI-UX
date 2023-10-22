@@ -24,6 +24,7 @@ const Testimony = () => {
         <div className='quote-container'>
           <img
             src={quote2}
+            id='quote'
             alt='Text bubble with quote stating: "This platform connected me with a community of generous donors who believed in my artistic vision and made it a reality. Their contribution not only provided me with the necessary resources but also gave me the confidence and motivation to push my boundaries as an artist." quoted from Rashid Johnson, Painter & Sculptor, Long Island, N.Y. '
           />
         </div>

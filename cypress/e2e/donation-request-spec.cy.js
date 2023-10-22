@@ -2,7 +2,7 @@ describe('Test Home Page', () => {
   beforeEach(() => {
     cy.interceptQuery('queryArtist.json', 'artist', 'login')
     cy.visit('http://localhost:3000/login-form')
-    cy.get('.login-link').click().wait('@login')
+    cy.get('.login-button').click().wait('@login')
     cy.get('[href="/donation-request"]').click()
   });
 

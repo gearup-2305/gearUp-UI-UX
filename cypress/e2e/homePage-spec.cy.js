@@ -1,6 +1,8 @@
 describe('Test Home Page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.interceptQuery('queryPosts.json', 'Posts', 'previewContent')
+
+    cy.visit('http://localhost:3000/').wait('@previewContent')
   });
 
     it('should display header', () => {

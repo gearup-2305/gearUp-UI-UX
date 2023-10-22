@@ -1,0 +1,84 @@
+{
+      "posts": [
+        {
+          "id": "1",
+          "title": "Post 1",
+          "details": "Details for Post 1",
+          "requestedAmount": 1000,
+          "currentAmount": 750,
+          "donationPercentage": 75
+        },
+        {
+          "id": "2",
+          "title": "Post 2",
+          "details": "Details for Post 2",
+          "requestedAmount": 800,
+          "currentAmount": 600,
+          "donationPercentage": 75
+        },
+        {
+          "id": "3",
+          "title": "Post 3",
+          "details": "Details for Post 3",
+          "requestedAmount": 1200,
+          "currentAmount": 1200,
+          "donationPercentage": 100
+        },
+        {
+          "id": "4",
+          "title": "Post 4",
+          "details": "Details for Post 4",
+          "requestedAmount": 700,
+          "currentAmount": 700,
+          "donationPercentage": 100
+        },
+        {
+          "id": "5",
+          "title": "Post 5",
+          "details": "Details for Post 5",
+          "requestedAmount": 1500,
+          "currentAmount": 1200,
+          "donationPercentage": 80
+        },
+        {
+          "id": "6",
+          "title": "Post 6",
+          "details": "Details for Post 6",
+          "requestedAmount": 900,
+          "currentAmount": 0,
+          "donationPercentage": 0
+        },
+        {
+          "id": "7",
+          "title": "Post 7",
+          "details": "Details for Post 7",
+          "requestedAmount": 2000,
+          "currentAmount": 1600,
+          "donationPercentage": 80
+        },
+        {
+          "id": "8",
+          "title": "Post 8",
+          "details": "Details for Post 8",
+          "requestedAmount": 500,
+          "currentAmount": 500,
+          "donationPercentage": 100
+        },
+        {
+          "id": "9",
+          "title": "Post 9",
+          "details": "Details for Post 9",
+          "requestedAmount": 1800,
+          "currentAmount": 1600,
+          "donationPercentage": 88
+        },
+        {
+          "id": "10",
+          "title": "Post 10",
+          "details": "Details for Post 10",
+          "requestedAmount": 1200,
+          "currentAmount": 1200,
+          "donationPercentage": 100
+        }
+      ]
+    }

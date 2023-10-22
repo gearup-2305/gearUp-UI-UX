@@ -1,0 +1,21 @@
+{"post": {
+    "id": "4",
+    "name": "Artist 1",
+    "city": "City 1",
+    "state": "State 1",
+    "zipcode": "12345",
+    "medium": "Painting",
+    "profileImage": "https://example.com/artist1.jpg",
+    "posts": [
+      {
+        "id": "101",
+        "title": "Project Title Sample",
+        "details": "Project Description Sample",
+        "imageUrl": "www.image.urlprojectImageSample.jpg",
+        "requestedAmount": 100,
+        "currentAmount": 0,
+        "artistId": "4",
+        "donations": []
+      }
+    ]
+  }}

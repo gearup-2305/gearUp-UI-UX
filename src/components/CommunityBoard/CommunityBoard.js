@@ -28,32 +28,18 @@ const CommunityBoard = () => {
       return <Error error={error}/>
     }
 
-    const artistsWithFilteredPosts = data && donations?.artists?.map(artists => {
+    const artistsWithFilteredPosts = data && donations?.artists?.map(artist => {
 
-      // artists.filter
-
-      let filteredPosts = artists.posts;
-      console.log('filteredposts' )
-    
+      let filteredPosts = artist.posts;
       if (noDonationsSearch) {
-        const lastPost = filteredPosts[filteredPosts.length - 1]
-        console.log('lastpost', lastPost)
-        if (lastPost?.currentAmount === 0) (
-          filteredPosts = lastPost
-          )
-          console.log('nodations', filteredPosts)
+        filteredPosts = artist.posts.filter(post => post.currentAmount === 0)
       }
-    
+
       if (firstProjectSearch) {
-        if (filteredPosts.length === 1) {
-          return filteredPosts
-        }
-        console.log('firstproject', filteredPosts)
+        filteredPosts = artist.posts.filter((post, index) => index === 0 && post.currentAmount === 0)
       }
-    
-      // Return the artist with the filtered posts
       return {
-        ...artists,
+        ...artist,
         posts: filteredPosts,
       };
     });

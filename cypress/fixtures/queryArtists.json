@@ -1,0 +1,131 @@
+{
+      "artists": [
+        {
+          "id": "1",
+          "name": "Artist 1",
+          "city": "City 1",
+          "state": "State 1",
+          "zipcode": "12345",
+          "medium": "Painting",
+          "profileImage": "https://example.com/artist1.jpg",
+          "posts": [
+            {
+              "id": "101",
+              "title": "Painting 1",
+              "details": "A beautiful painting",
+              "imageUrl": "https://example.com/painting1.jpg",
+              "requestedAmount": 1000,
+              "currentAmount": 750,
+              "artistId": "1",
+              "donations": [
+                {
+                  "id": "1001",
+                  "name": "Donor 1",
+                  "email": "donor1@example.com",
+                  "amount": 50,
+                  "postId": "101"
+                }
+              ]
+            },
+            {
+              "id": "102",
+              "title": "Painting 2",
+              "details": "Another beautiful painting",
+              "imageUrl": "https://example.com/painting2.jpg",
+              "requestedAmount": 1200,
+              "currentAmount": 1200,
+              "artistId": "1",
+              "donations": [
+                {
+                  "id": "1002",
+                  "name": "Donor 2",
+                  "email": "donor2@example.com",
+                  "amount": 600,
+                  "postId": "102"
+                },
+                {
+                  "id": "1003",
+                  "name": "Donor 3",
+                  "email": "donor3@example.com",
+                  "amount": 600,
+                  "postId": "102"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Artist 2",
+          "city": "City 2",
+          "state": "State 2",
+          "zipcode": "23456",
+          "medium": "Sculpture",
+          "profileImage": "https://example.com/artist2.jpg",
+          "posts": [
+            {
+              "id": "201",
+              "title": "Sculpture 1",
+              "details": "An amazing sculpture",
+              "imageUrl": "https://example.com/sculpture1.jpg",
+              "requestedAmount": 800,
+              "currentAmount": 800,
+              "artistId": "2",
+              "donations": [
+                {
+                  "id": "2001",
+                  "name": "Donor 4",
+                  "email": "donor4@example.com",
+                  "amount": 400,
+                  "postId": "201"
+                },
+                {
+                  "id": "2002",
+                  "name": "Donor 5",
+                  "email": "donor5@example.com",
+                  "amount": 400,
+                  "postId": "201"
+                }
+              ]
+            },
+            {
+              "id": "202",
+              "title": "Sculpture 2",
+              "details": "Another amazing sculpture",
+              "imageUrl": "https://example.com/sculpture2.jpg",
+              "requestedAmount": 700,
+              "currentAmount": 700,
+              "artistId": "2",
+              "donations": [
+                {
+                  "id": "2003",
+                  "name": "Donor 6",
+                  "email": "donor6@example.com",
+                  "amount": 350,
+                  "postId": "202"
+                },
+                {
+                  "id": "2004",
+                  "name": "Donor 7",
+                  "email": "donor7@example.com",
+                  "amount": 350,
+                  "postId": "202"
+                }
+              ]
+            },
+            {
+              "id": "203",
+              "title": "Sculpture 3",
+              "details": "Another amazing sculpture without donations",
+              "imageUrl": "https://example.com/sculpture3.jpg",
+              "requestedAmount": 900,
+              "currentAmount": 0,
+              "artistId": "2",
+              "donations": []
+            }
+          ]
+        }
+      ]
+    }
+
+  

@@ -1,6 +1,9 @@
 describe('Test Home Page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/donation-request')
+    cy.interceptQuery('queryArtist.json', 'artist', 'login')
+    cy.visit('http://localhost:3000/login-form')
+    cy.get('.login-link').click().wait('@login')
+    cy.get('[href="/donation-request"]').click()
   });
 
     it('should display header', () => {
@@ -40,7 +43,12 @@ describe('Test Home Page', () => {
      cy.get('button')
        .contains('Submit Donation Request')
 
+      })
       it('Form value should update when user enters information', () => {
+
+        cy.interceptQuery('queryAfterDonationRequest.json', 'artists', 'updatedCommBoard')
+        cy.interceptQuery('mutateNewDonationRequest.json', 'CreateDonationRequest', 'submitDonationRequest')
+
       //title
       cy.get('input[name="Project Title"]').type('Project Title Sample')
       cy.get('input[name="Project Title"]').should('have.attr', 'value', 'Project Title Sample')
@@ -49,11 +57,17 @@ describe('Test Home Page', () => {
       cy.get('input[name="Project Description"]').should('have.attr', 'value', 'Project Description Sample')
       //image
       cy.get('input[name="Project Image"]').type('projectImageSample.jpg')
-      cy.get('input[name="Project Image"]').should('have.attr', 'value', 'projectImageSample.jpg')
+      cy.get('input[name="Project Image"]').should('have.attr', 'value', 'www.image.urlprojectImageSample.jpg')
       //amount requested
-      cy.get('input[name="Dollar Amount Requested"]').type(100)
+      cy.get('input[name="Dollar Amount Requested"]').type('{backspace}').type(100)
       cy.get('input[name="Dollar Amount Requested"]').should('have.attr', 'value', '$100')
-    })
+      cy.get('.project-submit-button').click()
+      .wait('@submitDonationRequest')
+      .wait('@updatedCommBoard')
+
+          ////////////////////////////////////////
+        //ADD TEST TO CHECK ADDED DONATION REQUEST CARD//
+
 
     })
 

@@ -3,8 +3,8 @@
         {
           "id": "1",
           "name": "Artist 1",
-          "city": "City 1",
-          "state": "State 1",
+          "city": "Denver",
+          "state": "CO",
           "zipcode": "12345",
           "medium": "Painting",
           "profileImage": "https://example.com/artist1.jpg",

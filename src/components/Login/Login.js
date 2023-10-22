@@ -25,7 +25,7 @@ function Login({ setLoginAccess, loginAccess, setProfileAccess}) {
             name="Password"
             value={'FakePassword?'}
           />
-          <Link className='login-link' to={`/profile`} onClick={() => {
+          <Link className='login-button' to={`/profile`} onClick={() => {
             setLoginAccess(true) 
             setProfileAccess(true)
             }}

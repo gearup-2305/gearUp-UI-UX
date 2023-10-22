@@ -40,29 +40,33 @@ const CommunityBoard = () => {
 
       let filteredPosts = artist.posts;
       if (noDonationsSearch) {
-        filteredPosts = artist.posts.filter(post => post.currentAmount < post.requestedAmount)
+        filteredPosts = artist.posts.filter(post => post.currentAmount === 0)
       }
 
       if (firstProjectSearch) {
-        filteredPosts = artist.posts.filter((post, index) => index === 0 && post.currentAmount === 0)
+        filteredPosts = artist.posts.filter((post, index) => index === 0 && post.currentAmount < post.requestedAmount)
       }
 
       return {
         ...artist,
         posts: filteredPosts,
-      };
-    });
+      }
+    })
 
-    console.log(artistsWithFilteredPosts)
+    const allPostsWithArtistInfo = artistsWithFilteredPosts?.reduce((accumulator, artist) => {
+      const postsWithArtistInfo = artist?.posts?.map(post => ({
+          ...post,
+          artistProfileImage: artist.profileImage,
+          artistName: artist.name,
+          artistCity: artist.city,
+        }))
+        return accumulator.concat(postsWithArtistInfo)
+    }, [])
 
-    // const artistsWithFilteredPosts = data && donations?.artists?.map(artists => ({
-    //   ...artists,
-    //   posts: artists.posts.filter(post => post.requestedAmount > post.currentAmount)
-    // }))
+    const allDonationRequests = allPostsWithArtistInfo?.map( post => {
+        return (<DonationCard key={post.id} post={post} />)
+    }).reverse()
 
-      const allDonationRequests = artistsWithFilteredPosts?.map( user => {
-        return (<DonationCard key={user.id} user={user} />)
-      })
 
       return (
         <div className='community-board-container'>

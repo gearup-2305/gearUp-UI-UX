@@ -1,9 +1,16 @@
 .all-donation-requests-container {
-    /* margin-top: 300px; */
-    /* display: flex; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 79vw;
+    overflow: auto;
+    height: 39em;
 }
 
 .community-board-container {
     display: flex;
-    margin-top: 200px;
+    margin-top: 8em;
+    flex-direction: row;
+    align-items: flex-start;
+    
 }
+

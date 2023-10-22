@@ -1,12 +1,13 @@
 .form-section{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-top: 7.5em;
     background-color: #F8D59D;
-    width: 25%;
-    height: 100%;
+    width: 21vw;
+    height: 39em;
+    margin-top: 0px;
+    box-shadow: 20px 0px 20px 20px #f8d59d5e;
 }
 
 .form-heading {
@@ -19,13 +20,13 @@ form {
     flex-direction: column;
     justify-content: flex-start;
     padding: 1em;
-    border: solid black .5em;
+    border: solid #1b9cd890 .5em;
     align-items: center;
     background-color: white;
     width: 15em;
     height: 15em;
     margin-bottom: 2em;
-    /* margin-top: 2em; */
+    margin-top: 2em;
 }
 
 .input-label-wrapper {
@@ -53,4 +54,16 @@ button {
     margin-top: .5em;
     margin-bottom: .5em;
 
+}
+
+.state-selector {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.filter-picture {
+    width: 17em;
+    border-radius: 2em;
+    opacity: 80%;
 }

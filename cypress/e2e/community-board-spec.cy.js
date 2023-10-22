@@ -67,13 +67,13 @@ describe('Community Board', () => {
     })
     })
 
-    // it('Should be able to clear form filters', () => {
-    //   cy.get('.donation-card').first().then((card) => {
-    //     cy.wrap(card).find('.donation-offer').click()
-    //   })
-    //   cy.url('should', 'contain', 'http://localhost:3000/203')
+    it('Should be able to clear form filters', () => {
+      cy.get('.donation-card').first().then((card) => {
+        cy.wrap(card).find('.donation-offer').click()
+      })
+      cy.url('should', 'contain', 'http://localhost:3000/203')
   
-    // })
+    })
 
     it('Should display message letting user know if filter has no results', () => {
       cy.get('#state').select('TX')

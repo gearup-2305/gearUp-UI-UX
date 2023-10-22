@@ -38,9 +38,6 @@ Cypress.Commands.add('interceptQuery', (fixtureName, opName, alias) => {
 })
 
 Cypress.Commands.add('checkDonationRequestCard', (card, profileImage, artistName, artistCity, postTitle, postDetails, requestedAmount, currentAmount) => {
-  // cy.get('.profile-image-card').should('have.attr', 'src', profileImage)
-  // cy.get('h3').first().should('contain', artistName)
-  // cy.get('p').first().should('contain', artistCity)
 
   cy.wrap(card).find('.profile-image-card').should('have.attr', 'src', profileImage);
   cy.wrap(card).find('.personal-details-container h3').should('contain', artistName);

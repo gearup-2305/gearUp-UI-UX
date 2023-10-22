@@ -6,7 +6,13 @@
     margin: 2em;
     padding: 1em;
     border-radius: 1em;
-    width: 50%;
+    width: 28em;
+    margin-left: 45px;
+}
+
+.donation-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 5px #1b9cd8;
 }
 
 .donation-card h2{
@@ -70,4 +76,9 @@
     width: 9em;
     margin-bottom: 2em;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.donation-offer:hover {
+    transform: scale(1.1);
 }

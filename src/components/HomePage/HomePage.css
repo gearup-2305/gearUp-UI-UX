@@ -1,6 +1,6 @@
 .home-container {
     display: flex;
-    margin-top: 7.5em;
+    margin-top: 8em;
 }
 
 .image-container {
@@ -51,6 +51,11 @@
     width: 13em;
     margin-bottom: 2em;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    transform: scale(1.1);
 }
 
 .gear-up-link{
@@ -66,6 +71,11 @@
     height: 2em;
     width: 13em;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.gear-up-link:hover {
+    transform: scale(1.1);
 }
 
 .login-container {
@@ -173,7 +183,6 @@
 .quote {
     width: 60%;
     padding: 0;
-    /* margin-right: 5em; */
     margin-bottom: 0;
     text-align: center;
     font-family: 'montserrat';

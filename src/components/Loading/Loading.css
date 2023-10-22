@@ -2,14 +2,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background-color: #0257797b;
+    height: 100vh;
   }
 
 .lds-grid {
     position: relative;
-    width: 15vw;
-    height: 50vh;
+    width: 15em;
+    height: 15em;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

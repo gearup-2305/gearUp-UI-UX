@@ -1,0 +1,69 @@
+.form-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7.5em;
+    background-color: #F8D59D;
+    width: 21vw;
+    height: 39em;
+    margin-top: 0px;
+    box-shadow: 20px 0px 20px 20px #f8d59d5e;
+}
+
+.form-heading {
+    font-size: 1em;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1em;
+    border: solid #1b9cd890 .5em;
+    align-items: center;
+    background-color: white;
+    width: 15em;
+    height: 15em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.input-label-wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+label {
+    font-family: 'montserrat';
+    margin: .5em;
+}
+
+button {
+    width: 8em;
+    font-family: 'montserrat';
+    margin-top: 1em;
+    padding: .5em;
+}
+.no-donations-section,
+.first-donations-section {
+    display: flex;
+    width: 100%;
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+}
+
+.state-selector {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.filter-picture {
+    width: 17em;
+    border-radius: 2em;
+    opacity: 80%;
+}

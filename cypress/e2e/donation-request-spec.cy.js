@@ -65,6 +65,10 @@ describe('Test Home Page', () => {
       .wait('@submitDonationRequest')
       .wait('@updatedCommBoard')
 
+          ////////////////////////////////////////
+        //ADD TEST TO CHECK ADDED DONATION REQUEST CARD//
+
+
     })
 
 

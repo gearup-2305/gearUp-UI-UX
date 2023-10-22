@@ -54,6 +54,7 @@ describe('Test Home Page', () => {
       //description
       cy.get('input[name="Project Description"]').type('Project Description Sample')
       cy.get('input[name="Project Description"]').should('have.attr', 'value', 'Project Description Sample')
+
       //amount requested
       cy.get('input[name="Dollar Amount Requested"]').type('{backspace}').type(100)
       cy.get('input[name="Dollar Amount Requested"]').should('have.attr', 'value', '$100')

@@ -1,25 +1,26 @@
 describe('Test Login Page', () => {
-    beforeEach(() => {
-      cy.visit('http://localhost:3000/')
-    })
+  beforeEach(() => {
+    cy.interceptQuery('queryArtist.json', 'artist', 'login')
+    cy.visit('http://localhost:3000/')
+  });
   
-    it('should display header', () => {
-      cy.get('.header')
-      cy.get('.title-wrapper')
-      cy.get('h1').should('contain', 'GearUp')
+    it('Should bring user to login page from login link', () => {
+      cy.url().should('eq', 'http://localhost:3000/')
+      cy.get('.login-link').click()
+      cy.visit('http://localhost:3000/login-form')
+
     })
-  
-    it('should display nav bar', () => {
-      cy.get('.nav-wrapper')
-      cy.get('[href="/donation-request"]')
-      cy.get('[href="/"]')
+
+    it('Should display hardcoded username and password and redirect user to profile on login click', () => {
+      cy.url().should('eq', 'http://localhost:3000/')
+      cy.get('.login-link').click()
+      cy.visit('http://localhost:3000/login-form')
+      cy.get('.login-form')
+      cy.get('[for="Username"]')
+      cy.get('[placeholder="Password"]')
+      cy.get('.login-link').click()
+      cy.url().should('eq', 'http://localhost:3000/profile')
+
     })
-  
-    it('Visit donation request age from navigation', () => {
-      cy.get('.nav-wrapper')
-      cy.get('[href="/donation-request"]').click()
-      cy.visit('http://localhost:3000/donation-request')
-    })
-    
   
   })

@@ -14,3 +14,10 @@
     
 }
 
+.no-results {
+    width: 75vw;
+    align-items: center;
+    text-align: center;
+    margin-top: 15em;
+}
+

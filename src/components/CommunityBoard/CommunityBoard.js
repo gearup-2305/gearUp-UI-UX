@@ -19,6 +19,7 @@ const CommunityBoard = () => {
       refetch()
       if (!loading && data) {
         setDonations(data)
+        console.log(data)
       }
     },[loading, error, data, refetch])
 

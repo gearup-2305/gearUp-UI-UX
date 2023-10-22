@@ -30,7 +30,16 @@ describe('Test Home Page', () => {
   });
   
     it('Should contain hero image with GearUp description', () => {
-      cy.url().should('eq', 'http://localhost:3000/')
+      cy.get('.home-container')
+      cy.get('.description-container')
+      cy.get('h2')
+        .should('contain', 'Help Artists Create Art')
+      cy.get('p')
+        .should('contain', 'GearUp connects a widespread community of donors with thriving artists who are eager to bring their artistic vision to life.')
+  
+    })
+
+    it('Should contain testimonial section with two images and descriptive alt text', () => {
       cy.get('.home-container')
       cy.get('.description-container')
       cy.get('h2')

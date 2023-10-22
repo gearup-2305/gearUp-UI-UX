@@ -12,13 +12,14 @@ const Filter = ({setNoDonationsSearch, setFirstProjectSearch, noDonationsSearch,
             // setNoDonationsSearch(false)
             setFirstProjectSearch(true)
         } else if (e.target.id === 'state') {
-            setSelectedState()
+            setSelectedState(e.target.value)
         }
     }
 
     function setToFalse() {
         setFirstProjectSearch(false)
         setNoDonationsSearch(false)
+        setSelectedState('')
     }
 
     return (

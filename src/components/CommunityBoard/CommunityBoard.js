@@ -29,7 +29,14 @@ const CommunityBoard = () => {
       return <Error error={error}/>
     }
 
-    const artistsWithFilteredPosts = data && donations?.artists?.map(artist => {
+    const artistsWithFilteredPosts = data && donations?.artists
+    ?.filter(artist => {
+      if (!selectedState) {
+        return artist
+      } else if (selectedState === artist.state)
+        return artist
+    })
+    .map(artist => {
 
       let filteredPosts = artist.posts;
       if (noDonationsSearch) {
@@ -38,10 +45,6 @@ const CommunityBoard = () => {
 
       if (firstProjectSearch) {
         filteredPosts = artist.posts.filter((post, index) => index === 0 && post.currentAmount === 0)
-      }
-
-      if (selectedState) {
-        
       }
 
       return {

@@ -54,14 +54,14 @@ const CommunityBoard = () => {
       }
     })
 
-    const allPostsWithArtistInfo = artistsWithFilteredPosts?.reduce((accumulator, artist) => {
+    const allPostsWithArtistInfo = artistsWithFilteredPosts?.reduce((acc, artist) => {
       const postsWithArtistInfo = artist?.posts?.map(post => ({
           ...post,
           artistProfileImage: artist.profileImage,
           artistName: artist.name,
           artistCity: artist.city,
         }))
-        return accumulator.concat(postsWithArtistInfo)
+        return acc.concat(postsWithArtistInfo)
     }, [])
 
     const allDonationRequests = allPostsWithArtistInfo?.map( post => {

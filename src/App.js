@@ -7,6 +7,7 @@ import Login from './components/Login/Login';
 import CommunityBoard from './components/CommunityBoard/CommunityBoard';
 import Profile from './components/Profile/Profile';
 
+
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 

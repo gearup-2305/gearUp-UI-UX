@@ -4,7 +4,10 @@ import { NavLink } from 'react-router-dom';
 
 const Header = ({ profileAccess }) => {
   const profileLoginToggle = profileAccess ? (
-    <NavLink to={'/profile'} className='nav-link'>🎨 Profile</NavLink>
+    <div>
+      <NavLink to={`/donation-request`} className='nav-link'>Request a Donation</NavLink>
+      <NavLink to={'/profile'} className='nav-link'>🎨 Profile</NavLink>
+    </div>
   ) : (
     <NavLink to={'/login-form'} className='nav-link'>Login</NavLink>
   );
@@ -18,9 +21,8 @@ const Header = ({ profileAccess }) => {
       </div>
       <div className='nav-wrapper'>
         <NavLink to={`/`} className='nav-link'>Home</NavLink>
-        <NavLink to={`/donation-request`} className='nav-link'>Request a Donation</NavLink>
         <NavLink to={'/community-board'} className='nav-link'>Community Board</NavLink>
-        {profileLoginToggle}
+          {profileLoginToggle}
       </div>
     </header>
   );

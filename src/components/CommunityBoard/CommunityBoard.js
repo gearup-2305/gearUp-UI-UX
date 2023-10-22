@@ -13,6 +13,7 @@ const CommunityBoard = () => {
     const [donations, setDonations] = useState({})
     const [noDonationsSearch, setNoDonationsSearch] = useState(false)
     const [firstProjectSearch, setFirstProjectSearch] = useState(false)
+    const [selectedState, setSelectedState] = useState('') 
 
     useEffect(() => {
       refetch()
@@ -32,12 +33,17 @@ const CommunityBoard = () => {
 
       let filteredPosts = artist.posts;
       if (noDonationsSearch) {
-        filteredPosts = artist.posts.filter(post => post.currentAmount === 0)
+        filteredPosts = artist.posts.filter(post => post.currentAmount < post.requestedAmount)
       }
 
       if (firstProjectSearch) {
         filteredPosts = artist.posts.filter((post, index) => index === 0 && post.currentAmount === 0)
       }
+
+      if (selectedState) {
+        
+      }
+
       return {
         ...artist,
         posts: filteredPosts,
@@ -57,7 +63,7 @@ const CommunityBoard = () => {
 
       return (
         <div className='community-board-container'>
-        <Filter setNoDonationsSearch={setNoDonationsSearch} setFirstProjectSearch={setFirstProjectSearch} noDonationsSearch={noDonationsSearch} firstProjectSearch={firstProjectSearch}/>
+        <Filter setNoDonationsSearch={setNoDonationsSearch} setFirstProjectSearch={setFirstProjectSearch} noDonationsSearch={noDonationsSearch} firstProjectSearch={firstProjectSearch} selectedState={selectedState} setSelectedState={setSelectedState}/>
         <div className='all-donation-requests-container'>{allDonationRequests}</div>
         </div>
       )

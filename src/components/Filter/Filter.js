@@ -1,15 +1,18 @@
 import './Filter.css'
 
-const Filter = ({setNoDonationsSearch, setFirstProjectSearch, noDonationsSearch, firstProjectSearch}) => {
+const Filter = ({setNoDonationsSearch, setFirstProjectSearch, noDonationsSearch, firstProjectSearch, setSelectedState, selectedState}) => {
     function handleSearchInput(e) {
-        if (e.target.id === 'no-donations') {
+        setToFalse()
+        if (e.target.id === 'no-donations' && !noDonationsSearch) {
             setToFalse()
             // setFirstProjectSearch(false)
             setNoDonationsSearch(true)
-        } else if (e.target.id === 'first-projects') {
+        } else if (e.target.id === 'first-projects' && !firstProjectSearch) {
             setToFalse()
             // setNoDonationsSearch(false)
             setFirstProjectSearch(true)
+        } else if (e.target.id === 'state') {
+            setSelectedState()
         }
     }
 
@@ -54,13 +57,13 @@ const Filter = ({setNoDonationsSearch, setFirstProjectSearch, noDonationsSearch,
             </div>
             </div>
         </div>
-        {/* <div className='state-selector'>
+        <div className='state-selector'>
             <label htmlFor='state'>Select State:</label>
             <select
             id='state'
             name='state'
-            // value={selectedState}
-            // onChange={handleStateChange}
+            value={selectedState}
+            onChange={event => handleSearchInput(event)}
             >
             <option value=''>Select a state</option>
             <option value='AL'>AL</option>
@@ -113,8 +116,8 @@ const Filter = ({setNoDonationsSearch, setFirstProjectSearch, noDonationsSearch,
             <option value='WV'>WV</option>
             <option value='WI'>WI</option>
             <option value='WY'>WY</option>
-            </select> */}
-        {/* </div> */}
+            </select> 
+        </div>
         {/* <button className='button'>
             Submit
         </button> */}

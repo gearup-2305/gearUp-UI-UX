@@ -30,6 +30,7 @@ const CommunityBoard = () => {
     }
 
     const artistsWithFilteredPosts = data && donations?.artists
+    // eslint-disable-next-line
     ?.filter(artist => {
       if (!selectedState) {
         return artist

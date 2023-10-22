@@ -117,7 +117,7 @@ const Filter = ({setNoDonationsSearch, setFirstProjectSearch, noDonationsSearch,
                     </select> 
                 </div>
             </form>
-            <img className='filter-picture' src={paintPallete}></img>
+            <img className='filter-picture' src={paintPallete} alt='paint brush'></img>
         </div>
 
     )

@@ -62,9 +62,9 @@ describe('Test Home Page', () => {
       .wait('@submitDonationRequest')
       .wait('@updatedCommBoard')
 
-          ////////////////////////////////////////
-        //ADD TEST TO CHECK ADDED DONATION REQUEST CARD//
-
+        cy.get('.donation-card').first().then((card) => {
+          cy.checkDonationRequestCard(card, 'https://example.com/artist1.jpg', 'Artist 1', 'City 1', 'Project Title Sample', 'Details: Project Description Sample', 'Requested Amount: $100', 'Amount Raised: $0')
+        })
 
     })
 

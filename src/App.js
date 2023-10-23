@@ -18,6 +18,7 @@ function App() {
 
   return (
     <>
+    {/* note */}
         <Header profileAccess={profileAccess}/>
         <Routes>
           <Route path="/" element={<HomePage setLoginAccess={setLoginAccess} loginAccess={loginAccess}/>}/>

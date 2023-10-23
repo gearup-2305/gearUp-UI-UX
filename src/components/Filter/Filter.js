@@ -19,6 +19,11 @@ const Filter = ({setNoDonationsSearch, setFirstProjectSearch, noDonationsSearch,
         setSelectedState('')
     }
 
+    function handleFormClear (e) {
+        e.preventDefault()
+        setToFalse()
+    }
+
     return (
         <div className='form-section'>
             <form>
@@ -115,6 +120,10 @@ const Filter = ({setNoDonationsSearch, setFirstProjectSearch, noDonationsSearch,
                     <option value='WI'>WI</option>
                     <option value='WY'>WY</option>
                     </select> 
+                    {/* <p>*</p> */}
+                    <button onClick={(e) => {
+                        handleFormClear(e)
+                    }}>Clear Filters</button>
                 </div>
             </form>
             <img className='filter-picture' src={paintPallete} alt='paint brush'></img>

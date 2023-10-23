@@ -69,11 +69,13 @@ const CommunityBoard = () => {
         return (<DonationCard key={post.id} post={post} />)
     }).reverse()
 
+    console.log(allDonationRequests)
+
 
       return (
         <div className='community-board-container'>
         <Filter setNoDonationsSearch={setNoDonationsSearch} setFirstProjectSearch={setFirstProjectSearch} noDonationsSearch={noDonationsSearch} firstProjectSearch={firstProjectSearch} selectedState={selectedState} setSelectedState={setSelectedState}/>
-        <div className='all-donation-requests-container'>{allDonationRequests}</div>
+        {allDonationRequests?.length > 0 ? <div className='all-donation-requests-container'>{allDonationRequests}</div> : <p className='no-results'>Sorry, no results found matching your filter criteria. </p>}
         </div>
       )
 }
